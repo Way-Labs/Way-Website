@@ -5,12 +5,12 @@ import CardHover from '../CardHover';
 import Button from '../Button';
 import Title from '../Title';
 import styles from './index.less';
-import { ReactComponent as LogoSVG } from '@/static_assets/logos/coins/hayek-logo-yellow.svg';
+import { ReactComponent as LogoSVG } from '/public/logo.svg';
 
 const Logo = () => {
   return (
     <div className="hayek-logo">
-      <LogoSVG width="115" height="100" viewBox="0 0 1500 500" />
+      <LogoSVG width="115" />
     </div>
   );
 };
@@ -33,57 +33,483 @@ const Banner = () => {
   //   world.loop();
   // }, []);
 
-  const startBtnRef = useRef<HTMLButtonElement>(undefined!);
-  useEffect(() => {
-    startBtnRef.current.click();
-  }, []);
+  // const startBtnRef = useRef<HTMLButtonElement>(undefined!);
+  // useEffect(() => {
+  //   startBtnRef.current.click();
+  // }, []);
 
   return (
     <div className={styles.banner}>
-      {/* <canvas className="webgl"></canvas> */}
-
-      <Slinky />
-      <Logo />
-      <GoStarted />
-      <Button
-        render={
-          <button
-            id="play-music"
-            className="button effect effect-2 w-m"
-            ref={startBtnRef}
-          >
-            Start
-          </button>
-        }
-      />
-      <div className="title-wrapper">
-        <Title />
-      </div>
-      {/* <div className="card-hover">
-        <CardHover />
-      </div> */}
-      <div className="btn">
-        <div>
-          <a href="#" target="_blank" title="">
-            WhitePaper
-          </a>
-          <a href="#" target="_blank" title="">
-            Github
-          </a>
-          <a href="#" target="_blank" title="">
-            Twitter
-          </a>
-        </div>
-        <div>
-          <a href="#" target="_blank" title="">
-            Discord
-          </a>
-          <a href="#" target="_blank" title="">
-            Telegram
-          </a>
-          <a href="#" target="_blank" title="">
-            Youtube
-          </a>
+      <div className="container">
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="trigger"></div>
+        <div className="monitor">
+          <div className="camera o-x">
+            <div className="camera o-y">
+              <div className="camera o-z">
+                <div className="vr">
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                  <div className="vr_layer">
+                    <div className="vr_layer_item"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

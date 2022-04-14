@@ -2,7 +2,7 @@ import Banner from './Banner';
 // import PrettySticky from './PrettySticky';
 // import TimeLine from './TimeLine';
 // import Second from './Second';
-// import TextFillingWithWater from './TextFillingWithWater';
+import TextFillingWithWater from './TextFillingWithWater';
 import Footer from './Footer';
 // import CoinCardDisplay from './CoinCardDisplay';
 // import Intro from './stranger-things-intro';
@@ -24,8 +24,8 @@ export default function IndexPage() {
       {/* <PrettySticky /> */}
       {/* <TimeLine />
       <TableUi /> */}
-      {/* <TextFillingWithWater /> */}
-      {/* <Footer /> */}
+      <TextFillingWithWater />
+      <Footer />
     </div>
   );
 }
