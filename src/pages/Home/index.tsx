@@ -14,7 +14,7 @@ export default function IndexPage() {
   return (
     <div>
       {/* <Slinky /> */}
-      <Banner />
+
       {/* <CoinCardDisplay /> */}
       {/* <FlipForGsap /> */}
       {/* <Intro /> */}
@@ -24,6 +24,8 @@ export default function IndexPage() {
       {/* <PrettySticky /> */}
       {/* <TimeLine />
       <TableUi /> */}
+      <Banner />
+
       <TextFillingWithWater />
       <Footer />
     </div>
