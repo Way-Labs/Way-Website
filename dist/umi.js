@@ -34881,7 +34881,7 @@
                 history: ke(e.hot),
                 isServer: Object({ NODE_ENV: 'production' }).__IS_SERVER,
                 rootElement: 'root',
-                defaultTitle: 'HAYEK - Stablecoin & Forex Protocol',
+                defaultTitle: 'Way',
               },
             });
             return Bn(t);

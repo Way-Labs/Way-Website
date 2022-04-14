@@ -9,5 +9,5 @@ export default defineConfig({
     { path: '/dashboard', component: '@/pages/Dashboard' },
   ],
   fastRefresh: {},
-  title: 'HAYEK - Stablecoin & Forex Protocol',
+  title: 'Way',
 });
