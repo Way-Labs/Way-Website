@@ -1,78 +1,407 @@
-//gravity - changing this will change the speed of thought
-let g = 9.81;
-//I have been told that mathematicians use these single-letter poorly explained variables.
-let a, c;
-//colorMode
-let cMode = 0;
-//because arrows seemed like something we can can focus on
-setup = () => {
-  c = min(windowWidth, windowHeight) * 0.9; //clearly a variable
-  createCanvas(windowWidth, windowHeight);
-  a = -c / 3;
-  stroke(255 - cMode);
-  strokeWeight(0.5);
-  noFill();
-};
-draw = () => {
-  background(cMode);
-  stroke(255 - cMode);
-  //you can play with time itself - it's relative - maybe you should conceptualize non-linear time
-  t = frameCount / 7;
-  //the origin of thought is now centered:
-  translate(width / 2, height / 2);
-  strokeWeight(2);
-  for (let i = 0.7; i < 40; i += 0.5) {
-    push();
-    //shrinking thoughts
-    scale(1 / i, 1 / i);
-    circle(0, -c / 4, 5);
-    pendulum(2 * i);
-    pop();
-  }
-  strokeWeight(0.15);
-  //vanishing points to allow for your thoughts to disapate through observation
-  vanish(a + (c / 8) * sin(t / 100), 0);
-  vanish(-a - (c / 8) * sin(t / 100), 0);
-};
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.module.min.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.126.0/examples/jsm/controls/OrbitControls.js';
 
-pendulum = (f) => {
-  //the length of the pendulum shortens as it vainishes
-  L = c / 2 - min(c / 2, f);
-  //big T = period. What is a period? A moment for some and an eternity for others.
-  T = TWO_PI * sqrt(L / g);
-  //play with this theta, but slow down time if you need to absorb your observations
-  theta0 = PI / 2.75;
-  //Angular Position
-  A = theta0 * cos(sqrt(g / L) * t);
-  //x and y position of the weight of your thoughts
-  x = L * sin(A);
-  y = L * cos(A);
-  line(0, -c / 4, x, -c / 4 + y);
-  circle(x, -c / 4 + y, 5);
-};
+const demo = document.querySelector('.demo');
+const container = document.querySelector('.animation-wrapper');
+const globeCanvas = container.querySelector('#globe-3d');
+const globeOverlayCanvas = container.querySelector('#globe-2d-overlay');
+const popup = container.querySelector('.globe-popup');
 
-vanish = (a, b) => {
-  circle(a, b, 3);
-  //number of lines - you can uncomment the portion you see to rotate the lines
-  n = 45; //-20*sin(t/1000)
-  for (let i = 0; i < n; i++) {
-    push();
-    translate(a, b);
-    rotate((PI / n) * i);
-    line(-c, 0, c, 0);
-    pop();
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.set(demo, {
+    height: window.innerHeight,
+  });
+
+  let surface = new Surface();
+
+  new THREE.TextureLoader().load(
+    'https://ksenia-k.com/img/demos-preview/earth-map.jpeg',
+    (mapTex) => {
+      surface.earthTexture = mapTex;
+      surface.earthTexture.repeat.set(1, 1);
+      surface.earthTextureData = surface.getImageData();
+      surface.createGlobe();
+      surface.addAnchor();
+      surface.addCanvasEvents();
+      surface.updateDotSize();
+      surface.loop();
+    },
+  );
+
+  window.addEventListener(
+    'resize',
+    () => {
+      gsap.set(demo, {
+        height: window.innerHeight,
+      });
+
+      surface.updateSize();
+      surface.setupOverlayGraphic();
+      surface.updateDotSize();
+      surface.addCanvasEvents();
+    },
+    false,
+  );
+
+  gsap.to('.title', {
+    delay: 5,
+    duration: 0.2,
+    opacity: 1,
+  });
+});
+
+class Surface {
+  constructor() {
+    this.renderer = new THREE.WebGLRenderer({
+      canvas: globeCanvas,
+      alpha: true,
+    });
+    this.scene = new THREE.Scene();
+    this.camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 2);
+    this.camera.position.z = 1.1;
+    this.updateSize();
+
+    this.rayCaster = new THREE.Raycaster();
+    this.rayCaster.far = 1.15;
+    this.mouse = new THREE.Vector2();
+    this.coordinates2D = [0, 0];
+
+    this.setupOverlayGraphic();
+    this.createOrbitControls();
+
+    this.clock = new THREE.Clock();
+    this.clickTime = 0;
+
+    this.group = new THREE.Group();
+    this.group.scale.setScalar(0.9);
+    this.scene.add(this.group);
+
+    this.selectionVisible = false;
   }
-};
-//resize your window and you won't miss a beat
-windowResized = () => {
-  c = min(windowWidth, windowHeight) * 0.9;
-  resizeCanvas(windowWidth, windowHeight);
-};
-//some of us need a different mode of thought
-mousePressed = () => {
-  if (cMode === 0) {
-    cMode = 255;
-  } else {
-    cMode = 0;
+
+  createOrbitControls() {
+    this.controls = new OrbitControls(this.camera, globeCanvas);
+    this.controls.enablePan = true;
+    this.controls.enableZoom = false;
+    this.controls.enableDamping = true;
+    this.controls.minPolarAngle = 0.35 * Math.PI;
+    this.controls.maxPolarAngle = 0.65 * Math.PI;
+    this.controls.autoRotate = true;
   }
-};
+
+  createGlobe() {
+    const globeGeometry = new THREE.IcosahedronGeometry(1, 14);
+    this.mapMaterial = new THREE.ShaderMaterial({
+      vertexShader: document.getElementById('vertex-shader-map').textContent,
+      fragmentShader: document.getElementById('fragment-shader-map')
+        .textContent,
+      uniforms: {
+        u_visibility: { type: 't', value: this.earthTexture },
+        u_size: { type: 'f', value: 0 },
+        u_color_main: { type: 'v3', value: new THREE.Color(0xc1c1c2) },
+        u_clicked: { type: 'v3', value: new THREE.Vector3(0.0, 0.0, 1) },
+        u_time_since_click: { value: 3 },
+      },
+      alphaTest: false,
+      transparent: true,
+    });
+
+    const globe = new THREE.Points(globeGeometry, this.mapMaterial);
+    this.group.add(globe);
+
+    this.blackGlobe = new THREE.Mesh(
+      globeGeometry,
+      new THREE.MeshBasicMaterial({
+        color: 0x2c2c2e,
+        transparent: true,
+        opacity: 0.2,
+      }),
+    );
+    this.blackGlobe.scale.setScalar(0.99);
+    this.group.add(this.blackGlobe);
+  }
+
+  addAnchor() {
+    const geometry = new THREE.SphereGeometry(0.02, 16, 16);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0x4bc0c8,
+      transparent: true,
+      opacity: 1,
+    });
+    this.anchor = new THREE.Mesh(geometry, material);
+    this.group.add(this.anchor);
+  }
+
+  setupOverlayGraphic() {
+    this.overlayCtx = globeOverlayCanvas.getContext('2d');
+    this.overlayCtx.strokeStyle = '#4BC0C8';
+    this.overlayCtx.lineWidth = 5;
+    this.overlayCtx.lineCap = 'round';
+  }
+
+  updateOverlayGraphic() {
+    if (this.anchor) {
+      let activePointPosition = this.anchor.position.clone();
+      activePointPosition.applyMatrix4(this.group.matrixWorld);
+      const activePointPositionProjected = activePointPosition.clone();
+      activePointPositionProjected.project(this.camera);
+      this.coordinates2D[0] =
+        (activePointPositionProjected.x + 1) * container.offsetWidth * 0.5;
+      this.coordinates2D[1] =
+        (-activePointPositionProjected.y + 1) * container.offsetHeight * 0.5;
+
+      const matrixWorldInverse = this.controls.object.matrixWorldInverse;
+      activePointPosition.applyMatrix4(matrixWorldInverse);
+
+      if (activePointPosition.z > -1) {
+        if (this.selectionVisible === false) {
+          this.selectionVisible = true;
+          this.showPopupAnimation(false);
+        }
+
+        let popupX = this.coordinates2D[0];
+        let popupY = this.coordinates2D[1];
+        popupX -= activePointPositionProjected.x * container.offsetWidth * 0.3;
+        const upDown = activePointPositionProjected.y > 0.6;
+        popupY += upDown ? 20 : -20;
+        gsap.set(popup, {
+          x: popupX,
+          y: popupY,
+          xPercent: -50,
+          yPercent: upDown ? 0 : -100,
+        });
+
+        popupY += upDown ? -10 : 10;
+        const curveStartX = this.coordinates2D[0];
+        const curveStartY = this.coordinates2D[1];
+        let curveMidX = popupX + activePointPositionProjected.x * 100;
+        const curveMidY =
+          popupY + (upDown ? -0.5 : 0.1) * this.coordinates2D[1];
+
+        this.drawPopupConnector(
+          curveStartX,
+          curveStartY,
+          curveMidX,
+          curveMidY,
+          popupX,
+          popupY,
+        );
+      } else {
+        if (this.selectionVisible) {
+          this.hidePopupAnimation();
+        }
+        this.selectionVisible = false;
+      }
+    }
+  }
+
+  addCanvasEvents() {
+    container.addEventListener('mousemove', (e) => {
+      updateMousePosition(e.clientX, e.clientY, this);
+    });
+
+    function updateMousePosition(eX, eY, surface) {
+      const x = eX - container.offsetLeft;
+      const y = eY - container.offsetTop;
+      surface.mouse.x = (x / container.offsetWidth) * 2 - 1;
+      surface.mouse.y = -(y / container.offsetHeight) * 2 + 1;
+    }
+
+    container.addEventListener('click', (e) => {
+      updateMousePosition(
+        e.targetTouches ? e.targetTouches[0].pageX : e.clientX,
+        e.targetTouches ? e.targetTouches[0].pageY : e.clientY,
+        this,
+      );
+      this.checkIntersects();
+      if (this.landIsHovered) {
+        const intersects = this.rayCaster.intersectObject(this.blackGlobe);
+        if (intersects.length) {
+          this.anchor.position.set(
+            intersects[0].face.normal.x,
+            intersects[0].face.normal.y,
+            intersects[0].face.normal.z,
+          );
+          this.mapMaterial.uniforms.u_clicked.value = this.anchor.position;
+          popup.innerHTML = this.getLatLong();
+          this.showPopupAnimation(true);
+          gsap.delayedCall(0.15, () => {
+            this.clickTime = this.clock.getElapsedTime();
+          });
+        }
+      }
+    });
+  }
+
+  drawPopupConnector(startX, startY, midX, midY, endX, endY) {
+    this.overlayCtx.clearRect(
+      0,
+      0,
+      container.offsetWidth,
+      container.offsetHeight,
+    );
+    this.overlayCtx.beginPath();
+    this.overlayCtx.shadowOffsetX = startX > endX ? -4 : 4;
+    this.overlayCtx.moveTo(startX, startY);
+    this.overlayCtx.quadraticCurveTo(midX, midY, endX, endY);
+    this.overlayCtx.stroke();
+  }
+
+  showPopupAnimation(lifted) {
+    let positionLifted = this.anchor.position.clone();
+    if (lifted) {
+      positionLifted.multiplyScalar(1.1);
+    }
+    gsap
+      .timeline({})
+      .fromTo(
+        this.anchor.position,
+        {
+          x: positionLifted.x,
+          y: positionLifted.y,
+          z: positionLifted.z,
+        },
+        {
+          duration: 0.35,
+          x: this.anchor.position.x,
+          y: this.anchor.position.y,
+          z: this.anchor.position.z,
+          ease: 'back(4).out',
+        },
+        0,
+      )
+      .to(
+        this.anchor.material,
+        {
+          duration: 0.2,
+          opacity: 1,
+        },
+        0,
+      )
+      .fromTo(
+        globeOverlayCanvas,
+        {
+          opacity: 0,
+        },
+        {
+          duration: 0.3,
+          opacity: 1,
+        },
+        0.15,
+      )
+      .fromTo(
+        popup,
+        {
+          opacity: 0,
+          scale: 0.9,
+          transformOrigin: 'center bottom',
+        },
+        {
+          duration: 0.1,
+          opacity: 1,
+          scale: 1,
+        },
+        0.15 + 0.1,
+      );
+  }
+
+  hidePopupAnimation() {
+    gsap
+      .timeline({})
+      .to(
+        this.anchor.material,
+        {
+          duration: 0.1,
+          opacity: 0.2,
+        },
+        0,
+      )
+      .to(
+        globeOverlayCanvas,
+        {
+          duration: 0.15,
+          opacity: 0,
+        },
+        0,
+      )
+      .to(
+        popup,
+        {
+          duration: 0.15,
+          opacity: 0,
+          scale: 0.9,
+          transformOrigin: 'center bottom',
+        },
+        0,
+      );
+  }
+
+  getImageData() {
+    const image = this.earthTexture.image;
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0);
+    return context.getImageData(0, 0, image.width, image.height);
+  }
+
+  getLatLong() {
+    const pos = this.anchor.position;
+    const lat = 90 - (Math.acos(pos.y) * 180) / Math.PI;
+    const lng =
+      ((270 + (Math.atan2(pos.x, pos.z) * 180) / Math.PI) % 360) - 180;
+    return lat.toFixed(6) + ',&nbsp;' + lng.toFixed(6);
+  }
+
+  checkIntersects() {
+    let isLand = (imageData, x, y) => {
+      x = Math.floor(x * imageData.width);
+      y = Math.floor((1 - y) * imageData.height);
+      const position = (x + imageData.width * y) * 4;
+      const data = imageData.data;
+      return data[position] < 100;
+    };
+    this.rayCaster.setFromCamera(this.mouse, this.camera);
+    const intersects = this.rayCaster.intersectObject(this.blackGlobe);
+    if (intersects.length) {
+      this.landIsHovered = isLand(
+        this.earthTextureData,
+        intersects[0].uv.x,
+        intersects[0].uv.y,
+      );
+      document.body.style.cursor = this.landIsHovered ? 'pointer' : 'auto';
+    } else {
+      document.body.style.cursor = 'auto';
+    }
+  }
+
+  render() {
+    this.mapMaterial.uniforms.u_time_since_click.value =
+      this.clock.getElapsedTime() - this.clickTime;
+    this.updateOverlayGraphic();
+    this.controls.update();
+    this.checkIntersects();
+    this.renderer.render(this.scene, this.camera);
+  }
+
+  loop() {
+    this.render();
+    requestAnimationFrame(this.loop.bind(this));
+  }
+
+  updateSize() {
+    const minSide = 0.85 * Math.min(window.innerWidth, window.innerHeight);
+    container.style.width = minSide + 'px';
+    container.style.height = minSide + 'px';
+    this.renderer.setSize(minSide, minSide);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.camera.updateProjectionMatrix();
+    globeOverlayCanvas.width = minSide;
+    globeOverlayCanvas.height = minSide;
+  }
+
+  updateDotSize() {
+    this.mapMaterial.uniforms.u_size.value = 0.03 * container.offsetWidth;
+  }
+}

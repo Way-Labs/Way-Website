@@ -34052,7 +34052,7 @@
           );
         }, []);
         var p = () => {
-          n.slideNext(), c(!0);
+          n.slideNext();
         };
         return Object(yn['jsx'])('div', {
           className: vn.a.page,
@@ -34124,18 +34124,61 @@
                         Object(yn['jsxs'])('div', {
                           className: 'left',
                           children: [
-                            Object(yn['jsx'])('div', {
-                              children: Object(yn['jsx'])('iframe', {
-                                src: '/plan5/index.html',
-                              }),
-                            }),
                             Object(yn['jsx'])('h1', {
                               children:
                                 'Omnichain Asset and Data Interoperational Protocol',
                             }),
                             Object(yn['jsx'])('p', {
                               children:
-                                'Way Network achieves the multichain asset and data interoperability based on the IPFS, Endpoint, Oracle and Relayer.',
+                                'To send cross chain asset and data contracts will use an endpoint to send() from the source chain and lzReceive() to receive the message on the destination chain.',
+                            }),
+                            Object(yn['jsx'])('button', {
+                              class: 'btn btn-4 hover-border-7',
+                              onClick: () => c(!0),
+                              children: Object(yn['jsx'])('span', {
+                                children: '+ View the code',
+                              }),
+                            }),
+                          ],
+                        }),
+                        Object(yn['jsxs'])('div', {
+                          className: 'right',
+                          children: [
+                            Object(yn['jsx'])('div', {
+                              children: Object(yn['jsx'])('iframe', {
+                                src: '/plan5/index.html',
+                              }),
+                            }),
+                            Object(yn['jsx'])('div', {
+                              style: { position: 'relative', zIndex: '1' },
+                              children: Object(yn['jsx'])('iframe', {
+                                src: '/plan1/index.html',
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    Object(yn['jsxs'])('div', {
+                      className: 'swiper-slide plan1',
+                      children: [
+                        Object(yn['jsxs'])('div', {
+                          className: 'left',
+                          children: [
+                            Object(yn['jsx'])('h1', {
+                              children:
+                                'Omnichain Asset and Data Interoperational Protocol',
+                            }),
+                            Object(yn['jsx'])('p', {
+                              children:
+                                'To send cross chain asset and data contracts will use an endpoint to send() from the source chain and lzReceive() to receive the message on the destination chain.',
+                            }),
+                            Object(yn['jsx'])('button', {
+                              class: 'btn btn-4 hover-border-7',
+                              onClick: () => c(!0),
+                              children: Object(yn['jsx'])('span', {
+                                children: '+ View the code',
+                              }),
                             }),
                           ],
                         }),
@@ -34147,23 +34190,67 @@
                         }),
                       ],
                     }),
-                    Object(yn['jsx'])('div', {
-                      className: 'swiper-slide',
-                      children: Object(yn['jsx'])('iframe', {
-                        src: '/plan4/index.html',
-                      }),
+                    Object(yn['jsxs'])('div', {
+                      className: 'swiper-slide plan1',
+                      children: [
+                        Object(yn['jsxs'])('div', {
+                          className: 'left',
+                          children: [
+                            Object(yn['jsx'])('h1', {
+                              children:
+                                'Omnichain Asset and Data Interoperational Protocol',
+                            }),
+                            Object(yn['jsx'])('p', {
+                              children:
+                                'To send cross chain asset and data contracts will use an endpoint to send() from the source chain and lzReceive() to receive the message on the destination chain.',
+                            }),
+                            Object(yn['jsx'])('button', {
+                              class: 'btn btn-4 hover-border-7',
+                              onClick: () => c(!0),
+                              children: Object(yn['jsx'])('span', {
+                                children: '+ View the code',
+                              }),
+                            }),
+                          ],
+                        }),
+                        Object(yn['jsx'])('div', {
+                          className: 'right',
+                          children: Object(yn['jsx'])('iframe', {
+                            src: '/plan4/index.html',
+                          }),
+                        }),
+                      ],
                     }),
-                    Object(yn['jsx'])('div', {
-                      className: 'swiper-slide',
-                      children: Object(yn['jsx'])('iframe', {
-                        src: '/plan1/index.html',
-                      }),
-                    }),
-                    Object(yn['jsx'])('div', {
-                      className: 'swiper-slide',
-                      children: Object(yn['jsx'])('iframe', {
-                        src: '/plan3/index.html',
-                      }),
+                    Object(yn['jsxs'])('div', {
+                      className: 'swiper-slide plan1',
+                      children: [
+                        Object(yn['jsxs'])('div', {
+                          className: 'left',
+                          children: [
+                            Object(yn['jsx'])('h1', {
+                              children:
+                                'Omnichain Asset and Data Interoperational Protocol',
+                            }),
+                            Object(yn['jsx'])('p', {
+                              children:
+                                'To send cross chain asset and data contracts will use an endpoint to send() from the source chain and lzReceive() to receive the message on the destination chain.',
+                            }),
+                            Object(yn['jsx'])('button', {
+                              class: 'btn btn-4 hover-border-7',
+                              onClick: () => c(!0),
+                              children: Object(yn['jsx'])('span', {
+                                children: '+ View the code',
+                              }),
+                            }),
+                          ],
+                        }),
+                        Object(yn['jsx'])('div', {
+                          className: 'right',
+                          children: Object(yn['jsx'])('iframe', {
+                            src: '/plan3/index.html',
+                          }),
+                        }),
+                      ],
                     }),
                   ],
                 }),
@@ -34231,7 +34318,11 @@
                 visible: a,
                 onClose: () => c(!1),
                 children: [
-                  Object(yn['jsx'])('h1', { children: '\u7b2c1\u6bb5' }),
+                  Object(yn['jsx'])('h1', { children: 'Send Messages' }),
+                  Object(yn['jsx'])('p', {
+                    children:
+                      "To send a message, call the Endpoint's send() function. Initiate thesend() function in your contracts (similar to the CounterMock) to send a cross chain message.",
+                  }),
                   Object(yn['jsx'])(pn, {
                     language: 'go',
                     wrapLines: !0,
@@ -34240,7 +34331,10 @@
                     theme: gn,
                     showLineNumbers: !0,
                   }),
-                  Object(yn['jsx'])('h1', { children: '\u7b2c2\u6bb5' }),
+                  Object(yn['jsx'])('p', {
+                    children:
+                      'Here is an explanation of the endpoint.send() interface:',
+                  }),
                   Object(yn['jsx'])(pn, {
                     language: 'go',
                     wrapLines: !0,

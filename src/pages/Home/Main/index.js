@@ -63,7 +63,6 @@ const Page = () => {
   }, []);
   const next = () => {
     mySwiper.slideNext();
-    setVisible(true);
   };
   const options = {
     selectOnLineNumbers: true,
@@ -99,28 +98,84 @@ const Page = () => {
           <div className="swiper-wrapper">
             <div className="swiper-slide plan1">
               <div className="left">
+                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+                <p>
+                  To send cross chain asset and data contracts will use an
+                  endpoint to send() from the source chain and lzReceive() to
+                  receive the message on the destination chain.
+                </p>
+                <button
+                  class="btn btn-4 hover-border-7"
+                  onClick={() => setVisible(true)}
+                >
+                  <span>+ View the code</span>
+                </button>
+              </div>
+              <div className="right">
                 <div>
                   <iframe src="/plan5/index.html"></iframe>
                 </div>
+                <div style={{ position: 'relative', zIndex: '1' }}>
+                  <iframe src="/plan1/index.html"></iframe>
+                </div>
+              </div>
+            </div>
+            <div className="swiper-slide plan1">
+              <div className="left">
                 <h1>Omnichain Asset and Data Interoperational Protocol</h1>
                 <p>
-                  Way Network achieves the multichain asset and data
-                  interoperability based on the IPFS, Endpoint, Oracle and
-                  Relayer.
+                  To send cross chain asset and data contracts will use an
+                  endpoint to send() from the source chain and lzReceive() to
+                  receive the message on the destination chain.
                 </p>
+                <button
+                  class="btn btn-4 hover-border-7"
+                  onClick={() => setVisible(true)}
+                >
+                  <span>+ View the code</span>
+                </button>
               </div>
               <div className="right">
                 <iframe src="/plan2/index.html"></iframe>
               </div>
             </div>
-            <div className="swiper-slide">
-              <iframe src="/plan4/index.html"></iframe>
+            <div className="swiper-slide plan1">
+              <div className="left">
+                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+                <p>
+                  To send cross chain asset and data contracts will use an
+                  endpoint to send() from the source chain and lzReceive() to
+                  receive the message on the destination chain.
+                </p>
+                <button
+                  class="btn btn-4 hover-border-7"
+                  onClick={() => setVisible(true)}
+                >
+                  <span>+ View the code</span>
+                </button>
+              </div>
+              <div className="right">
+                <iframe src="/plan4/index.html"></iframe>
+              </div>
             </div>
-            <div className="swiper-slide">
-              <iframe src="/plan1/index.html"></iframe>
-            </div>
-            <div className="swiper-slide">
-              <iframe src="/plan3/index.html"></iframe>
+            <div className="swiper-slide plan1">
+              <div className="left">
+                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+                <p>
+                  To send cross chain asset and data contracts will use an
+                  endpoint to send() from the source chain and lzReceive() to
+                  receive the message on the destination chain.
+                </p>
+                <button
+                  class="btn btn-4 hover-border-7"
+                  onClick={() => setVisible(true)}
+                >
+                  <span>+ View the code</span>
+                </button>
+              </div>
+              <div className="right">
+                <iframe src="/plan3/index.html"></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -165,7 +220,12 @@ const Page = () => {
           visible={visible}
           onClose={() => setVisible(false)}
         >
-          <h1>第1段</h1>
+          <h1>Send Messages</h1>
+          <p>
+            To send a message, call the Endpoint's send() function. Initiate
+            thesend() function in your contracts (similar to the CounterMock) to
+            send a cross chain message.
+          </p>
           <CopyBlock
             language="go"
             wrapLines={true}
@@ -174,7 +234,7 @@ const Page = () => {
             theme={theme}
             showLineNumbers={true}
           />
-          <h1>第2段</h1>
+          <p>Here is an explanation of the endpoint.send() interface:</p>
           <CopyBlock
             language="go"
             wrapLines={true}

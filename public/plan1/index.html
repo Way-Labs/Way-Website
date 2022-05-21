@@ -2,15 +2,71 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - metronome Meditation</title>
+  <title>CodePen - Interactive 3D Globe (Three.js + GLSL + GSAP)</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<div class="demo">
+    <div class="animation-wrapper">
+        <canvas id="globe-3d"></canvas>
+        <canvas id="globe-2d-overlay"></canvas>
+        <div id="globe-popup-overlay">
+            <div class="globe-popup"></div>
+        </div>
+    </div>
+</div>
 
+
+<script type="x-shader/x-fragment" id="fragment-shader-map">
+    uniform vec3 u_color_main;
+
+    varying float vOpacity;
+
+    float circle(vec2 st, float r) {
+        vec2 dist = st - vec2(.5);
+        return 1. - smoothstep(.99 * r, 1.01 * r, dot(dist, dist) * 4.);
+    }
+
+    void main() {
+        float dot = circle(gl_PointCoord.xy, .7);
+        if (dot < 0.5) discard;
+        gl_FragColor = vec4(u_color_main, dot * vOpacity);
+    }
+</script>
+
+<script type="x-shader/x-vertex" id="vertex-shader-map">
+    uniform sampler2D u_visibility;
+    uniform float u_size;
+    uniform float u_time_since_click;
+    uniform vec3 u_clicked;
+
+    varying float vOpacity;
+
+    void main() {
+
+        // mask with world map
+        float visibility = 1. - step(.4, texture2D(u_visibility, uv).x);
+        gl_PointSize = visibility * u_size;
+
+        // add ripple
+        float time = u_time_since_click;
+        float dist = length(position - u_clicked);
+        float damping = pow(1. - sin(min(time, 1.)), 5.);
+        float wave = (1. + sin(3. * dist + 13. * time));
+        float delta = -.025 * damping * wave;
+
+        // make backside dots darker
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        vOpacity = (1. / length(mvPosition.xyz) - .7);
+        vOpacity = clamp(vOpacity, 0., .5) + .01;
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position * (1. + delta), 1.);
+    }
+</script>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js'></script><script  src="./script.js"></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script type="module" src="./script.js"></script>
 
 </body>
 </html>
