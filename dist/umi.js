@@ -10960,6 +10960,9 @@
       (e.exports.__esModule = !0),
       (e.exports['default'] = e.exports);
   },
+  OUlt: function (e, t, n) {
+    e.exports = { page: 'page___3fph8' };
+  },
   P4y1: function (e, t) {
     e.exports = {};
   },
@@ -30402,7 +30405,7 @@
     'use strict';
     n.r(t),
       n.d(t, 'default', function () {
-        return wn;
+        return On;
       });
     n('EFp3'), n('CWI+');
     var r,
@@ -33974,10 +33977,12 @@
     function pn(e) {
       return c.a.createElement(dn, Object.assign({}, e));
     }
-    var hn = {
+    var hn = n('OUlt'),
+      vn = n.n(hn),
+      gn = {
         lineNumberColor: '#6272a4',
         lineNumberBgColor: '#282a36',
-        backgroundColor: '#282a36',
+        backgroundColor: 'rgb(30, 30, 30)',
         textColor: '#f8f8f2',
         substringColor: '#f1fa8c',
         keywordColor: '#ff79c6',
@@ -34012,12 +34017,12 @@
         functionColor: '#50FA7B',
         numberColor: '#bd93f9',
       },
-      vn = n('nKUr'),
-      gn =
+      yn = n('nKUr'),
+      mn =
         'pragma solidity 0.8.4;\npragma abicoder v2;\n\nimport "../lzApp/NonblockingLzApp.sol";\n\n/// @title A LayerZero example sending a cross chain message from a source chain to a destination chain to increment a counter\ncontract OmniCounter is NonblockingLzApp {\n    uint public counter;\n\n    constructor(address _lzEndpoint) NonblockingLzApp(_lzEndpoint) {}\n\n    function _nonblockingLzReceive(uint16, bytes memory, uint64, bytes memory) internal override {\n        // _nonblockingLzReceive is how we provide custom logic to lzReceive()\n        // in this case, increment a counter when a message is received.\n        counter += 1;\n    }\n\n    function incrementCounter(uint16 _dstChainId) public payable {\n        // _lzSend calls endpoint.send()\n        _lzSend(_dstChainId, bytes(""), payable(msg.sender), address(0x0), bytes(""));\n    }\n}',
-      yn =
+      bn =
         '// an endpoint is the contract which has the send() function\nILayerZeroEndpoint public endpoint;\n// call send() to send a message/payload to another chain\nendpoint.send{value:msg.value}(\n    10001,               // destination LayerZero chainId\n    dstContractAddress,  // send to this address on the destination          \n    bytes("hello"),      // bytes payload\n    msg.sender,          // refund address\n    address(0x0),        // future parameter\n    bytes("")            // adapterParams (see "Advanced Features")\n );',
-      mn = () => {
+      wn = () => {
         var e = Object(u['useState'])(),
           t = Object(Ee['a'])(e, 2),
           n = t[0],
@@ -34034,7 +34039,6 @@
           r(
             new Swiper('.swiper', {
               loop: !0,
-              autoplay: !0,
               effect: 'fade',
               on: {
                 slideChangeTransitionEnd: function () {
@@ -34050,182 +34054,210 @@
         var p = () => {
           n.slideNext(), c(!0);
         };
-        return Object(vn['jsxs'])('div', {
-          className: 'container',
-          children: [
-            Object(vn['jsxs'])('header', {
-              className: 'header',
-              children: [
-                Object(vn['jsx'])('a', {
-                  className: 'header__logo',
-                  children: Object(vn['jsx'])(Ne, { style: { width: '40px' } }),
-                }),
-                Object(vn['jsx'])('nav', {
-                  className: 'header__menu',
-                  children: Object(vn['jsxs'])('ul', {
-                    className: 'header__menu__list',
-                    children: [
-                      Object(vn['jsx'])('li', {
-                        className: 'header__menu__item',
-                        children: Object(vn['jsx'])('a', {
-                          className: 'header__menu__link',
-                          children: 'works',
-                        }),
-                      }),
-                      Object(vn['jsx'])('li', {
-                        className: 'header__menu__item',
-                        children: Object(vn['jsx'])('a', {
-                          className: 'header__menu__link',
-                          children: 'culture',
-                        }),
-                      }),
-                      Object(vn['jsx'])('li', {
-                        className: 'header__menu__item',
-                        children: Object(vn['jsx'])('a', {
-                          className: 'header__menu__link',
-                          children: 'news',
-                        }),
-                      }),
-                      Object(vn['jsx'])('li', {
-                        className: 'header__menu__item',
-                        children: Object(vn['jsx'])('a', {
-                          className: 'header__menu__link',
-                          children: 'careers',
-                        }),
-                      }),
-                      Object(vn['jsx'])('li', {
-                        className: 'header__menu__item',
-                        children: Object(vn['jsx'])('a', {
-                          className: 'header__menu__link',
-                          children: 'contact',
-                        }),
-                      }),
-                    ],
-                  }),
-                }),
-              ],
-            }),
-            Object(vn['jsx'])('div', {
-              className: 'swiper',
-              children: Object(vn['jsxs'])('div', {
-                className: 'swiper-wrapper',
+        return Object(yn['jsx'])('div', {
+          className: vn.a.page,
+          children: Object(yn['jsxs'])('div', {
+            className: 'container',
+            children: [
+              Object(yn['jsxs'])('header', {
+                className: 'header',
                 children: [
-                  Object(vn['jsx'])('div', {
-                    className: 'swiper-slide',
-                    children: Object(vn['jsx'])('iframe', {
-                      src: '/plan4/index.html',
+                  Object(yn['jsx'])('a', {
+                    className: 'header__logo',
+                    children: Object(yn['jsx'])(Ne, {
+                      style: { width: '40px' },
                     }),
                   }),
-                  Object(vn['jsx'])('div', {
-                    className: 'swiper-slide',
-                    children: Object(vn['jsx'])('iframe', {
-                      src: '/plan1/index.html',
-                    }),
-                  }),
-                  Object(vn['jsx'])('div', {
-                    className: 'swiper-slide',
-                    children: Object(vn['jsx'])('iframe', {
-                      src: '/plan2/index.html',
-                    }),
-                  }),
-                  Object(vn['jsx'])('div', {
-                    className: 'swiper-slide',
-                    children: Object(vn['jsx'])('iframe', {
-                      src: '/plan3/index.html',
+                  Object(yn['jsx'])('nav', {
+                    className: 'header__menu',
+                    children: Object(yn['jsxs'])('ul', {
+                      className: 'header__menu__list',
+                      children: [
+                        Object(yn['jsx'])('li', {
+                          className: 'header__menu__item',
+                          children: Object(yn['jsx'])('a', {
+                            className: 'header__menu__link',
+                            children: 'works',
+                          }),
+                        }),
+                        Object(yn['jsx'])('li', {
+                          className: 'header__menu__item',
+                          children: Object(yn['jsx'])('a', {
+                            className: 'header__menu__link',
+                            children: 'culture',
+                          }),
+                        }),
+                        Object(yn['jsx'])('li', {
+                          className: 'header__menu__item',
+                          children: Object(yn['jsx'])('a', {
+                            className: 'header__menu__link',
+                            children: 'news',
+                          }),
+                        }),
+                        Object(yn['jsx'])('li', {
+                          className: 'header__menu__item',
+                          children: Object(yn['jsx'])('a', {
+                            className: 'header__menu__link',
+                            children: 'careers',
+                          }),
+                        }),
+                        Object(yn['jsx'])('li', {
+                          className: 'header__menu__item',
+                          children: Object(yn['jsx'])('a', {
+                            className: 'header__menu__link',
+                            children: 'contact',
+                          }),
+                        }),
+                      ],
                     }),
                   }),
                 ],
               }),
-            }),
-            Object(vn['jsx'])('main', {
-              className: 'sliders-container',
-              children: Object(vn['jsx'])('ul', {
-                className: 'pagination',
-                children: f.map((e) =>
-                  Object(vn['jsx'])('li', {
-                    className: 'pagination__item '.concat(
-                      e && 'pagination__item--active',
-                    ),
-                    onClick: p,
-                    children: Object(vn['jsx'])('a', {
-                      className: 'pagination__button',
-                    }),
-                  }),
-                ),
-              }),
-            }),
-            Object(vn['jsx'])('footer', {
-              className: 'footer',
-              children: Object(vn['jsx'])('nav', {
-                className: 'footer__menu',
-                children: Object(vn['jsxs'])('ul', {
-                  className: 'footer__menu__list',
+              Object(yn['jsx'])('div', {
+                className: 'swiper',
+                children: Object(yn['jsxs'])('div', {
+                  className: 'swiper-wrapper',
                   children: [
-                    Object(vn['jsx'])('li', {
-                      className: 'footer__menu__item',
-                      children: Object(vn['jsx'])('a', {
-                        className: 'footer__menu__link',
-                        children: 'facebook',
+                    Object(yn['jsxs'])('div', {
+                      className: 'swiper-slide plan1',
+                      children: [
+                        Object(yn['jsxs'])('div', {
+                          className: 'left',
+                          children: [
+                            Object(yn['jsx'])('div', {
+                              children: Object(yn['jsx'])('iframe', {
+                                src: '/plan5/index.html',
+                              }),
+                            }),
+                            Object(yn['jsx'])('h1', {
+                              children:
+                                'Omnichain Asset and Data Interoperational Protocol',
+                            }),
+                            Object(yn['jsx'])('p', {
+                              children:
+                                'Way Network achieves the multichain asset and data interoperability based on the IPFS, Endpoint, Oracle and Relayer.',
+                            }),
+                          ],
+                        }),
+                        Object(yn['jsx'])('div', {
+                          className: 'right',
+                          children: Object(yn['jsx'])('iframe', {
+                            src: '/plan2/index.html',
+                          }),
+                        }),
+                      ],
+                    }),
+                    Object(yn['jsx'])('div', {
+                      className: 'swiper-slide',
+                      children: Object(yn['jsx'])('iframe', {
+                        src: '/plan4/index.html',
                       }),
                     }),
-                    Object(vn['jsx'])('li', {
-                      className: 'footer__menu__item',
-                      children: Object(vn['jsx'])('a', {
-                        className: 'footer__menu__link',
-                        children: 'dribbble',
+                    Object(yn['jsx'])('div', {
+                      className: 'swiper-slide',
+                      children: Object(yn['jsx'])('iframe', {
+                        src: '/plan1/index.html',
                       }),
                     }),
-                    Object(vn['jsx'])('li', {
-                      className: 'footer__menu__item',
-                      children: Object(vn['jsx'])('a', {
-                        className: 'footer__menu__link',
-                        children: 'instagram',
+                    Object(yn['jsx'])('div', {
+                      className: 'swiper-slide',
+                      children: Object(yn['jsx'])('iframe', {
+                        src: '/plan3/index.html',
                       }),
                     }),
                   ],
                 }),
               }),
-            }),
-            Object(vn['jsxs'])(ke, {
-              title: Object(vn['jsxs'])('div', {
-                style: { display: 'flex', justifyContent: 'center' },
+              Object(yn['jsx'])('main', {
+                className: 'sliders-container',
+                children: Object(yn['jsx'])('ul', {
+                  className: 'pagination',
+                  children: f.map((e) =>
+                    Object(yn['jsx'])('li', {
+                      className: 'pagination__item '.concat(
+                        e && 'pagination__item--active',
+                      ),
+                      onClick: p,
+                      children: Object(yn['jsx'])('a', {
+                        className: 'pagination__button',
+                      }),
+                    }),
+                  ),
+                }),
+              }),
+              Object(yn['jsx'])('footer', {
+                className: 'footer',
+                children: Object(yn['jsx'])('nav', {
+                  className: 'footer__menu',
+                  children: Object(yn['jsxs'])('ul', {
+                    className: 'footer__menu__list',
+                    children: [
+                      Object(yn['jsx'])('li', {
+                        className: 'footer__menu__item',
+                        children: Object(yn['jsx'])('a', {
+                          className: 'footer__menu__link',
+                          children: 'facebook',
+                        }),
+                      }),
+                      Object(yn['jsx'])('li', {
+                        className: 'footer__menu__item',
+                        children: Object(yn['jsx'])('a', {
+                          className: 'footer__menu__link',
+                          children: 'dribbble',
+                        }),
+                      }),
+                      Object(yn['jsx'])('li', {
+                        className: 'footer__menu__item',
+                        children: Object(yn['jsx'])('a', {
+                          className: 'footer__menu__link',
+                          children: 'instagram',
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              Object(yn['jsxs'])(ke, {
+                title: Object(yn['jsxs'])('div', {
+                  style: { display: 'flex', justifyContent: 'center' },
+                  children: [
+                    Object(yn['jsx'])('span', { children: 'View On Github' }),
+                    '\xa0\xa0',
+                    Object(yn['jsx'])(De, {}),
+                  ],
+                }),
+                placement: 'bottom',
+                size: 'large',
+                visible: a,
+                onClose: () => c(!1),
                 children: [
-                  Object(vn['jsx'])('span', { children: 'View On Github' }),
-                  '\xa0\xa0',
-                  Object(vn['jsx'])(De, {}),
+                  Object(yn['jsx'])('h1', { children: '\u7b2c1\u6bb5' }),
+                  Object(yn['jsx'])(pn, {
+                    language: 'go',
+                    wrapLines: !0,
+                    text: mn,
+                    codeBlock: !0,
+                    theme: gn,
+                    showLineNumbers: !0,
+                  }),
+                  Object(yn['jsx'])('h1', { children: '\u7b2c2\u6bb5' }),
+                  Object(yn['jsx'])(pn, {
+                    language: 'go',
+                    wrapLines: !0,
+                    text: bn,
+                    codeBlock: !0,
+                    theme: gn,
+                    showLineNumbers: !0,
+                  }),
                 ],
               }),
-              placement: 'bottom',
-              size: 'large',
-              visible: a,
-              onClose: () => c(!1),
-              children: [
-                Object(vn['jsx'])('h1', { children: '\u7b2c1\u6bb5' }),
-                Object(vn['jsx'])(pn, {
-                  language: 'go',
-                  wrapLines: !0,
-                  text: gn,
-                  codeBlock: !0,
-                  theme: hn,
-                  showLineNumbers: !1,
-                }),
-                Object(vn['jsx'])('h1', { children: '\u7b2c2\u6bb5' }),
-                Object(vn['jsx'])(pn, {
-                  language: 'go',
-                  wrapLines: !0,
-                  text: yn,
-                  codeBlock: !0,
-                  theme: hn,
-                  showLineNumbers: !1,
-                }),
-              ],
-            }),
-          ],
+            ],
+          }),
         });
       },
-      bn = mn;
-    function wn() {
-      return Object(vn['jsx'])('div', { children: Object(vn['jsx'])(bn, {}) });
+      xn = wn;
+    function On() {
+      return Object(yn['jsx'])('div', { children: Object(yn['jsx'])(xn, {}) });
     }
   },
   yl30: function (e, t, n) {

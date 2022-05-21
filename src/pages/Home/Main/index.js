@@ -2,7 +2,9 @@ import { useLayoutEffect, useState } from 'react';
 import { Drawer } from 'antd';
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 import { ReactComponent as Arrow } from '@/assets/arrow.svg';
-import { CopyBlock, dracula } from 'react-code-blocks';
+import { CopyBlock } from 'react-code-blocks';
+import styles from './index.less';
+import theme from './theme';
 const code = `pragma solidity 0.8.4;
 pragma abicoder v2;
 
@@ -44,7 +46,7 @@ const Page = () => {
     setMyswiper(
       new Swiper('.swiper', {
         loop: true, // 循环模式选项
-        autoplay: true,
+        // autoplay: true,
         effect: 'fade',
         on: {
           slideChangeTransitionEnd: function () {
@@ -67,107 +69,122 @@ const Page = () => {
     selectOnLineNumbers: true,
   };
   return (
-    <div className="container">
-      <header className="header">
-        <a className="header__logo">
-          <Logo style={{ width: '40px' }} />
-        </a>
-        <nav className="header__menu">
-          <ul className="header__menu__list">
-            <li className="header__menu__item">
-              <a className="header__menu__link">works</a>
-            </li>
-            <li className="header__menu__item">
-              <a className="header__menu__link">culture</a>
-            </li>
-            <li className="header__menu__item">
-              <a className="header__menu__link">news</a>
-            </li>
-            <li className="header__menu__item">
-              <a className="header__menu__link">careers</a>
-            </li>
-            <li className="header__menu__item">
-              <a className="header__menu__link">contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div className="swiper">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">
-            <iframe src="/plan4/index.html"></iframe>
-          </div>
-          <div className="swiper-slide">
-            <iframe src="/plan1/index.html"></iframe>
-          </div>
-          <div className="swiper-slide">
-            <iframe src="/plan2/index.html"></iframe>
-          </div>
-          <div className="swiper-slide">
-            <iframe src="/plan3/index.html"></iframe>
+    <div className={styles.page}>
+      <div className="container">
+        <header className="header">
+          <a className="header__logo">
+            <Logo style={{ width: '40px' }} />
+          </a>
+          <nav className="header__menu">
+            <ul className="header__menu__list">
+              <li className="header__menu__item">
+                <a className="header__menu__link">works</a>
+              </li>
+              <li className="header__menu__item">
+                <a className="header__menu__link">culture</a>
+              </li>
+              <li className="header__menu__item">
+                <a className="header__menu__link">news</a>
+              </li>
+              <li className="header__menu__item">
+                <a className="header__menu__link">careers</a>
+              </li>
+              <li className="header__menu__item">
+                <a className="header__menu__link">contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide plan1">
+              <div className="left">
+                <div>
+                  <iframe src="/plan5/index.html"></iframe>
+                </div>
+                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+                <p>
+                  Way Network achieves the multichain asset and data
+                  interoperability based on the IPFS, Endpoint, Oracle and
+                  Relayer.
+                </p>
+              </div>
+              <div className="right">
+                <iframe src="/plan2/index.html"></iframe>
+              </div>
+            </div>
+            <div className="swiper-slide">
+              <iframe src="/plan4/index.html"></iframe>
+            </div>
+            <div className="swiper-slide">
+              <iframe src="/plan1/index.html"></iframe>
+            </div>
+            <div className="swiper-slide">
+              <iframe src="/plan3/index.html"></iframe>
+            </div>
           </div>
         </div>
-      </div>
-      <main className="sliders-container">
-        <ul className="pagination">
-          {navList.map((item) => (
-            <li
-              className={`pagination__item ${
-                item && 'pagination__item--active'
-              }`}
-              onClick={next}
-            >
-              <a className="pagination__button"></a>
-            </li>
-          ))}
-        </ul>
-      </main>
-      <footer className="footer">
-        <nav className="footer__menu">
-          <ul className="footer__menu__list">
-            <li className="footer__menu__item">
-              <a className="footer__menu__link">facebook</a>
-            </li>
-            <li className="footer__menu__item">
-              <a className="footer__menu__link">dribbble</a>
-            </li>
-            <li className="footer__menu__item">
-              <a className="footer__menu__link">instagram</a>
-            </li>
+        <main className="sliders-container">
+          <ul className="pagination">
+            {navList.map((item) => (
+              <li
+                className={`pagination__item ${
+                  item && 'pagination__item--active'
+                }`}
+                onClick={next}
+              >
+                <a className="pagination__button"></a>
+              </li>
+            ))}
           </ul>
-        </nav>
-      </footer>
-      <Drawer
-        title={
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <span>View On Github</span>&nbsp;&nbsp;
-            <Arrow />
-          </div>
-        }
-        placement={'bottom'}
-        size="large"
-        visible={visible}
-        onClose={() => setVisible(false)}
-      >
-        <h1>第1段</h1>
-        <CopyBlock
-          language="go"
-          wrapLines={true}
-          text={code}
-          codeBlock
-          theme={dracula}
-          showLineNumbers={false}
-        />
-        <h1>第2段</h1>
-        <CopyBlock
-          language="go"
-          wrapLines={true}
-          text={code2}
-          codeBlock
-          theme={dracula}
-          showLineNumbers={false}
-        />
-      </Drawer>
+        </main>
+        <footer className="footer">
+          <nav className="footer__menu">
+            <ul className="footer__menu__list">
+              <li className="footer__menu__item">
+                <a className="footer__menu__link">facebook</a>
+              </li>
+              <li className="footer__menu__item">
+                <a className="footer__menu__link">dribbble</a>
+              </li>
+              <li className="footer__menu__item">
+                <a className="footer__menu__link">instagram</a>
+              </li>
+            </ul>
+          </nav>
+        </footer>
+        <Drawer
+          title={
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <span>View On Github</span>&nbsp;&nbsp;
+              <Arrow />
+            </div>
+          }
+          placement={'bottom'}
+          size="large"
+          visible={visible}
+          onClose={() => setVisible(false)}
+        >
+          <h1>第1段</h1>
+          <CopyBlock
+            language="go"
+            wrapLines={true}
+            text={code}
+            codeBlock
+            theme={theme}
+            showLineNumbers={true}
+          />
+          <h1>第2段</h1>
+          <CopyBlock
+            language="go"
+            wrapLines={true}
+            text={code2}
+            codeBlock
+            theme={theme}
+            showLineNumbers={true}
+          />
+        </Drawer>
+      </div>
     </div>
   );
 };
