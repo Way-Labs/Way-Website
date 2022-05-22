@@ -17,6 +17,7 @@
           font-size: 50px;
           position: relative;
           z-index: 1;
+          line-height: 1;
         }
 
         p {
@@ -26,10 +27,18 @@
         }
       }
 
+      .textsmall {
+        h1 {
+          font-family: 'Timmana', sans-serif;
+          font-size: 40px;
+        }
+      }
+
       .right {
         min-width: 50%;
         position: relative;
-        & > div {
+
+        &>div {
           position: absolute;
           top: 0;
           left: 0;
@@ -38,8 +47,9 @@
         }
       }
     }
-    .plan4 {
-    }
+
+    .plan4 {}
+
     .codemain {
       position: absolute;
       width: 500px;

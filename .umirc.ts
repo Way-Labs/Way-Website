@@ -6,6 +6,6 @@ export default defineConfig({
   },
   routes: [{ path: '/', component: '@/pages/Home' }],
   fastRefresh: {},
-  title: 'Way',
+  title: 'Way Network',
   // chainWebpack: chainWebpack
 });

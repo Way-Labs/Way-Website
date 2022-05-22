@@ -2,58 +2,45 @@ import { useLayoutEffect, useState } from 'react';
 import { Drawer } from 'antd';
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 import { ReactComponent as Arrow } from '@/assets/arrow.svg';
+import { ReactComponent as Github } from '@/assets/github.svg';
+import { ReactComponent as Twitter } from '@/assets/twitter.svg';
+import { ReactComponent as Discord } from '@/assets/discord.svg';
+import { ReactComponent as Medium } from '@/assets/medium.svg';
+import { ReactComponent as Telegram } from '@/assets/telegram.svg';
+import { ReactComponent as Youtube } from '@/assets/youtube.svg';
+import { ReactComponent as Paper } from '@/assets/paper.svg';
+import Menu from '../Menu';
+
 import { CopyBlock } from 'react-code-blocks';
 import styles from './index.less';
 import theme from './theme';
-const code = `pragma solidity 0.8.4;
-pragma abicoder v2;
-
-import "../lzApp/NonblockingLzApp.sol";
-
-/// @title A LayerZero example sending a cross chain message from a source chain to a destination chain to increment a counter
-contract OmniCounter is NonblockingLzApp {
-    uint public counter;
-
-    constructor(address _lzEndpoint) NonblockingLzApp(_lzEndpoint) {}
-
-    function _nonblockingLzReceive(uint16, bytes memory, uint64, bytes memory) internal override {
-        // _nonblockingLzReceive is how we provide custom logic to lzReceive()
-        // in this case, increment a counter when a message is received.
-        counter += 1;
-    }
-
-    function incrementCounter(uint16 _dstChainId) public payable {
-        // _lzSend calls endpoint.send()
-        _lzSend(_dstChainId, bytes(""), payable(msg.sender), address(0x0), bytes(""));
-    }
-}`;
-const code2 = `// an endpoint is the contract which has the send() function
-ILayerZeroEndpoint public endpoint;
-// call send() to send a message/payload to another chain
-endpoint.send{value:msg.value}(
-    10001,               // destination LayerZero chainId
-    dstContractAddress,  // send to this address on the destination          
-    bytes("hello"),      // bytes payload
-    msg.sender,          // refund address
-    address(0x0),        // future parameter
-    bytes("")            // adapterParams (see "Advanced Features")
- );`;
+import codeData from './code';
+var letters = [];
+let t = 'Omnichain Asset and Data Interoperational Protocol';
+for (let i = 0; i < t.length; i++) {
+  letters.push({
+    flag: false,
+    num: Math.random() > 0.5 && 1 || 0,
+    text: t[i]
+  })
+}
 const Page = () => {
   const [mySwiper, setMyswiper] = useState();
   const [visible, setVisible] = useState(false);
   const [navList, setNavList] = useState([true, false, false, false]);
+  const [aniText, setAniText] = useState(letters);
   useLayoutEffect(() => {
     setMyswiper(
       new Swiper('.swiper', {
-        loop: true, // 循环模式选项
+        loop: false, // 循环模式选项
         // autoplay: true,
-        effect: 'fade',
+        // effect: 'fade',
         on: {
           slideChangeTransitionEnd: function () {
             setNavList((data) => {
               let newData = data.map((item) => false);
               return newData.map(
-                (item, index) => index == this.activeIndex - 1,
+                (item, index) => index == this.activeIndex,
               );
             });
           },
@@ -61,8 +48,30 @@ const Page = () => {
       }),
     );
   }, []);
-  const next = () => {
-    mySwiper.slideNext();
+  useLayoutEffect(() => {
+    const ran = Math.floor(Math.random() * 49);
+    setTimeout(() => {
+      setAniText(data => {
+        let newData = data.map((item, index) => {
+          if (aniText.filter(item => item.num == 2).length > 35) {
+            item.num = 2;
+          }
+          else {
+            if (ran == index && item.num < 2) {
+              item.num++;
+            }
+          }
+
+          return item;
+        });
+        return newData;
+      });
+
+    }, 10);
+  }, [aniText]);
+  const next = (index) => {
+    // mySwiper.slideNext();
+    mySwiper.slideTo(index)
   };
   const options = {
     selectOnLineNumbers: true,
@@ -74,42 +83,48 @@ const Page = () => {
           <a className="header__logo">
             <Logo style={{ width: '40px' }} />
           </a>
-          <nav className="header__menu">
+          {/* <nav className="header__menu">
             <ul className="header__menu__list">
               <li className="header__menu__item">
-                <a className="header__menu__link">works</a>
+                <a className="header__menu__link">Developers</a>
               </li>
               <li className="header__menu__item">
-                <a className="header__menu__link">culture</a>
+                <a className="header__menu__link">Ecosystem</a>
               </li>
               <li className="header__menu__item">
-                <a className="header__menu__link">news</a>
-              </li>
-              <li className="header__menu__item">
-                <a className="header__menu__link">careers</a>
-              </li>
-              <li className="header__menu__item">
-                <a className="header__menu__link">contact</a>
+                <a className="header__menu__link">Community</a>
               </li>
             </ul>
-          </nav>
+          </nav> */}
         </header>
+        <Menu />
         <div className="swiper">
           <div className="swiper-wrapper">
             <div className="swiper-slide plan1">
               <div className="left">
-                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+                <div className="random">
+                  <h1 style={{ wordBreak: 'break-all' }}>
+                    {
+                      aniText.map(item => <span className="nbr ltr">{item.num == 2 && item.text || item.num}</span>)
+                    }
+                  </h1>
+                  {/* <h1>
+                    Omnichain Asset and Data Interoperational Protocol
+                  </h1> */}
+                  {/* <iframe src="/plan6/index.html"></iframe> */}
+                </div>
+                {/*  */}
+
                 <p>
-                  To send cross chain asset and data contracts will use an
-                  endpoint to send() from the source chain and lzReceive() to
-                  receive the message on the destination chain.
+                  Way Network achieves the multichain asset and data interoperability based on the IPFS, Endpoint, Oracle and Relayer.
                 </p>
-                <button
-                  class="btn btn-4 hover-border-7"
+                {/* <button
+                  className="btn btn-4 hover-border-7"
                   onClick={() => setVisible(true)}
                 >
-                  <span>+ View the code</span>
-                </button>
+                  <span>Explore</span>
+                </button> */}
+                <div><a className="viewCode">Explore</a></div>
               </div>
               <div className="right">
                 <div>
@@ -121,57 +136,56 @@ const Page = () => {
               </div>
             </div>
             <div className="swiper-slide plan1">
-              <div className="left">
-                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+              <div className="left textsmall">
+                <h1>The native communication integrated with distributed computing and storage</h1>
                 <p>
-                  To send cross chain asset and data contracts will use an
-                  endpoint to send() from the source chain and lzReceive() to
-                  receive the message on the destination chain.
+                  The Way Endpoint is encapsulated in Communication, Validation, and Network, which orchestrates the data by the distributed computing and storage between any pair of nodes.
                 </p>
-                <button
-                  class="btn btn-4 hover-border-7"
+                {/* <button
+                  className="btn btn-4 hover-border-7"
                   onClick={() => setVisible(true)}
                 >
-                  <span>+ View the code</span>
-                </button>
+                  <span>Explore</span>
+                </button> */}
+                {/* <div><a className="viewCode">Explore</a></div> */}
               </div>
               <div className="right">
                 <iframe src="/plan2/index.html"></iframe>
               </div>
             </div>
             <div className="swiper-slide plan1">
-              <div className="left">
-                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+              <div className="left textsmall">
+                <h1>The ideal solution to enable cross-chain
+                  transactions with trustless valid delivery </h1>
                 <p>
-                  To send cross chain asset and data contracts will use an
-                  endpoint to send() from the source chain and lzReceive() to
-                  receive the message on the destination chain.
+                  The way communication protocol is the preferred method of cross-chain messaging system and can guarantee the trustless valid delivery without placing any trust in intermediary entities or tokens.
                 </p>
-                <button
-                  class="btn btn-4 hover-border-7"
+                {/* <button
+                  className="btn btn-4 hover-border-7"
                   onClick={() => setVisible(true)}
                 >
-                  <span>+ View the code</span>
-                </button>
+                  <span>Explore</span>
+                </button> */}
+                {/* <div><a className="viewCode">Explore</a></div> */}
               </div>
               <div className="right">
                 <iframe src="/plan4/index.html"></iframe>
               </div>
             </div>
             <div className="swiper-slide plan1">
-              <div className="left">
-                <h1>Omnichain Asset and Data Interoperational Protocol</h1>
+              <div className="left textsmall">
+                <h1>The network fabric underlying the fully-connected omnichain ecosystem </h1>
                 <p>
-                  To send cross chain asset and data contracts will use an
-                  endpoint to send() from the source chain and lzReceive() to
-                  receive the message on the destination chain.
+                  Developers will be able to write
+                  seamless inter-chain applications like DEX or yield aggregator without worrying about differing semantics between inter- and intra-chain transactions.
                 </p>
-                <button
-                  class="btn btn-4 hover-border-7"
+                {/* <button
+                  className="btn btn-4 hover-border-7"
                   onClick={() => setVisible(true)}
                 >
-                  <span>+ View the code</span>
-                </button>
+                  <span>Explore</span>
+                </button> */}
+                {/* <div><a className="viewCode">Explore</a></div> */}
               </div>
               <div className="right">
                 <iframe src="/plan3/index.html"></iframe>
@@ -181,12 +195,11 @@ const Page = () => {
         </div>
         <main className="sliders-container">
           <ul className="pagination">
-            {navList.map((item) => (
+            {navList.map((item, index) => (
               <li
-                className={`pagination__item ${
-                  item && 'pagination__item--active'
-                }`}
-                onClick={next}
+                className={`pagination__item ${item && 'pagination__item--active'
+                  }`}
+                onClick={() => next(index)}
               >
                 <a className="pagination__button"></a>
               </li>
@@ -195,25 +208,46 @@ const Page = () => {
         </main>
         <footer className="footer">
           <nav className="footer__menu">
-            <ul className="footer__menu__list">
-              <li className="footer__menu__item">
-                <a className="footer__menu__link">facebook</a>
+            <ul className="social">
+              <li>
+                <a href="#" title="Github">
+                  <Github />
+                </a>
+                <a href="#" title="Twitter">
+                  <Twitter />
+                </a>{' '}
               </li>
-              <li className="footer__menu__item">
-                <a className="footer__menu__link">dribbble</a>
+              <li>
+                <a href="#" title="Telegram">
+                  <Telegram />
+                </a>{' '}
               </li>
-              <li className="footer__menu__item">
-                <a className="footer__menu__link">instagram</a>
+              <li>
+                <a href="#" title="Discord">
+                  <Discord />
+                </a>{' '}
+              </li>
+              <li>
+                <a href="#" title="Medium">
+                  <Medium />
+                </a>{' '}
+              </li>
+              <li>
+                <a href="#" title="Youtube">
+                  <Youtube />
+                </a>
               </li>
             </ul>
           </nav>
         </footer>
         <Drawer
           title={
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <span>View On Github</span>&nbsp;&nbsp;
-              <Arrow />
-            </div>
+            <a>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <span>View On Github</span>&nbsp;&nbsp;
+                <Arrow />
+              </div>
+            </a>
           }
           placement={'bottom'}
           size="large"
@@ -229,7 +263,7 @@ const Page = () => {
           <CopyBlock
             language="go"
             wrapLines={true}
-            text={code}
+            text={codeData.f1.code}
             codeBlock
             theme={theme}
             showLineNumbers={true}
@@ -238,14 +272,14 @@ const Page = () => {
           <CopyBlock
             language="go"
             wrapLines={true}
-            text={code2}
+            text={codeData.f2.code}
             codeBlock
             theme={theme}
             showLineNumbers={true}
           />
         </Drawer>
       </div>
-    </div>
+    </div >
   );
 };
 

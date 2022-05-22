@@ -19,7 +19,7 @@ body {
   align-items: center;
 }
 .animation-wrapper{
-  transform: scale(0.6);
+  transform: scale(0.7);
 }
 #globe-3d, #globe-2d-overlay, #globe-popup-overlay, .globe-popup {
   display: block;
