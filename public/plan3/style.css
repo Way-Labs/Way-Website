@@ -27,6 +27,11 @@ body *, body *:after, body *:before {
   width: 330px;
   height: 330px;
 }
+@media screen and (max-width:500px) {
+  .circles {
+    transform: scale(0.6);
+  }
+}
 .circles .circle {
   width: 130px;
   height: 130px;
