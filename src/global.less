@@ -290,7 +290,7 @@ a:active {
   display: flex;
   position: absolute;
   left: 15%;
-  top: 95%;
+  top:-50px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -349,7 +349,7 @@ a:active {
 
   .pagination {
     left: 50%;
-    top: calc(100% - 50px);
+    // top: calc(100% - 50px);
     transform: translateX(-50%);
   }
 }
@@ -452,7 +452,10 @@ a {
   justify-content: flex-end;
   align-items: center;
   padding: 30px;
-  z-index: 1;
+  z-index: 11111;
+  position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer__menu__link {

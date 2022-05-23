@@ -193,7 +193,10 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <main className="sliders-container">
+        {/* <main className="sliders-container">
+
+        </main> */}
+        <footer className="footer">
           <ul className="pagination">
             {navList.map((item, index) => (
               <li
@@ -205,8 +208,6 @@ const Page = () => {
               </li>
             ))}
           </ul>
-        </main>
-        <footer className="footer">
           <nav className="footer__menu">
             <ul className="social">
               <li>
