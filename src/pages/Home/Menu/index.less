@@ -15,7 +15,12 @@
       /* Number of items you have */
       --item-width: calc(var(--menu-width) / var(--items));
     }
+    @media (min-width: 800px) {
+      nav {
+        top:4em;
+      }
 
+    }
     nav {
       width: var(--menu-width);
       display: flex;
@@ -26,7 +31,7 @@
       margin: 0px auto;
       perspective: 2000px;
       flex-wrap: wrap;
-      top: 4em;
+      top: 20px;
     }
 
     @media (max-width: 800px) {
