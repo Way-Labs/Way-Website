@@ -89,7 +89,7 @@ const Page = () => {
       if (aniText.filter((item) => item.num != 2).length > 0) {
         start();
       }
-    }, 20);
+    }, 10);
   };
   const next = (index) => {
     // mySwiper.slideNext();
@@ -272,15 +272,27 @@ const Page = () => {
           <nav className="footer__menu">
             <ul className="social">
               <li>
-                <a href="#" title="Github">
+                <a
+                  target="_blank"
+                  href="https://github.com/Way-Labs"
+                  title="Github"
+                >
                   <Github />
                 </a>
-                <a href="#" title="Twitter">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/WayNetwork_Labs"
+                  title="Twitter"
+                >
                   <Twitter />
                 </a>{' '}
               </li>
               <li>
-                <a href="#" title="Telegram">
+                <a
+                  target="_blank"
+                  href="https://t.me/waynetwork_official"
+                  title="Telegram"
+                >
                   <Telegram />
                 </a>{' '}
               </li>
