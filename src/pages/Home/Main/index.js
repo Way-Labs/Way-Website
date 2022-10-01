@@ -19,10 +19,11 @@ var letters = [];
 let t = 'Omnichain Asset and Data Interoperational Protocol';
 for (let i = 0; i < t.length; i++) {
   letters.push({
-    flag: false,
-    num: Math.random() > 0.5 && 1 || 0,
-    text: t[i]
-  })
+    flag: true,
+    // num: Math.random() > 0.5 && 1 || 0,
+    num: 2,
+    text: t[i],
+  });
 }
 const Page = () => {
   const [mySwiper, setMyswiper] = useState();
@@ -39,24 +40,43 @@ const Page = () => {
           slideChangeTransitionEnd: function () {
             setNavList((data) => {
               let newData = data.map((item) => false);
-              return newData.map(
-                (item, index) => index == this.activeIndex,
-              );
+              return newData.map((item, index) => index == this.activeIndex);
             });
           },
         },
       }),
     );
   }, []);
-  useLayoutEffect(() => {
-    const ran = Math.floor(Math.random() * 49);
+  // useLayoutEffect(() => {
+  //   const ran = Math.floor(Math.random() * 49);
+  //   setTimeout(() => {
+  //     setAniText(data => {
+  //       let newData = data.map((item, index) => {
+  //         if (aniText.filter(item => item.num == 2).length > 35) {
+  //           item.num = 2;
+  //         }
+  //         else {
+  //           if (ran == index && item.num < 2) {
+  //             item.num++;
+  //           }
+  //         }
+
+  //         return item;
+  //       });
+  //       return newData;
+  //     });
+
+  //   }, 10);
+  // }, [aniText]);
+  const start = () => {
     setTimeout(() => {
-      setAniText(data => {
+      const ran = Math.floor(Math.random() * 49);
+
+      setAniText((data) => {
         let newData = data.map((item, index) => {
-          if (aniText.filter(item => item.num == 2).length > 35) {
+          if (aniText.filter((item) => item.num == 2).length > 35) {
             item.num = 2;
-          }
-          else {
+          } else {
             if (ran == index && item.num < 2) {
               item.num++;
             }
@@ -66,15 +86,31 @@ const Page = () => {
         });
         return newData;
       });
-
-    }, 10);
-  }, [aniText]);
+      if (aniText.filter((item) => item.num != 2).length > 0) {
+        start();
+      }
+    }, 20);
+  };
   const next = (index) => {
     // mySwiper.slideNext();
-    mySwiper.slideTo(index)
+    mySwiper.slideTo(index);
   };
   const options = {
     selectOnLineNumbers: true,
+  };
+
+  const handleMouseEnter = () => {
+    if (aniText.filter((item) => item.num == 2).length > 0) {
+      setAniText((data) => {
+        let newData = data.map((item) => {
+          item.num = (Math.random() > 0.5 && 1) || 0;
+          return item;
+        });
+
+        return newData;
+      });
+      start();
+    }
   };
   return (
     <div className={styles.page}>
@@ -103,10 +139,15 @@ const Page = () => {
             <div className="swiper-slide plan1">
               <div className="left">
                 <div className="random">
-                  <h1 style={{ wordBreak: 'break-all' }}>
-                    {
-                      aniText.map(item => <span className="nbr ltr">{item.num == 2 && item.text || item.num}</span>)
-                    }
+                  <h1
+                    style={{ wordBreak: 'break-all' }}
+                    onMouseEnter={handleMouseEnter}
+                  >
+                    {aniText.map((item) => (
+                      <span className="nbr ltr">
+                        {(item.num == 2 && item.text) || item.num}
+                      </span>
+                    ))}
                   </h1>
                   {/* <h1>
                     Omnichain Asset and Data Interoperational Protocol
@@ -116,7 +157,9 @@ const Page = () => {
                 {/*  */}
 
                 <p>
-                  Way Network achieves the multichain asset and data interoperability based on the IPFS, Endpoint, Oracle and Relayer.
+                  Way Network achieves the multichain asset and data
+                  interoperability based on the IPFS, Endpoint, Oracle and
+                  Relayer.
                 </p>
                 {/* <button
                   className="btn btn-4 hover-border-7"
@@ -124,7 +167,9 @@ const Page = () => {
                 >
                   <span>Explore</span>
                 </button> */}
-                <div><a className="viewCode">Explore</a></div>
+                <div>
+                  <a className="viewCode">Explore</a>
+                </div>
               </div>
               <div className="right">
                 <div>
@@ -137,9 +182,14 @@ const Page = () => {
             </div>
             <div className="swiper-slide plan1">
               <div className="left textsmall">
-                <h1>The native communication integrated with distributed computing and storage</h1>
+                <h1>
+                  The native communication integrated with distributed computing
+                  and storage
+                </h1>
                 <p>
-                  The Way Endpoint is encapsulated in Communication, Validation, and Network, which orchestrates the data by the distributed computing and storage between any pair of nodes.
+                  The Way Endpoint is encapsulated in Communication, Validation,
+                  and Network, which orchestrates the data by the distributed
+                  computing and storage between any pair of nodes.
                 </p>
                 {/* <button
                   className="btn btn-4 hover-border-7"
@@ -155,10 +205,15 @@ const Page = () => {
             </div>
             <div className="swiper-slide plan1">
               <div className="left textsmall">
-                <h1>The ideal solution to enable cross-chain
-                  transactions with trustless valid delivery </h1>
+                <h1>
+                  The ideal solution to enable cross-chain transactions with
+                  trustless valid delivery{' '}
+                </h1>
                 <p>
-                  The way communication protocol is the preferred method of cross-chain messaging system and can guarantee the trustless valid delivery without placing any trust in intermediary entities or tokens.
+                  The way communication protocol is the preferred method of
+                  cross-chain messaging system and can guarantee the trustless
+                  valid delivery without placing any trust in intermediary
+                  entities or tokens.
                 </p>
                 {/* <button
                   className="btn btn-4 hover-border-7"
@@ -174,10 +229,15 @@ const Page = () => {
             </div>
             <div className="swiper-slide plan1">
               <div className="left textsmall">
-                <h1>The network fabric underlying the fully-connected omnichain ecosystem </h1>
+                <h1>
+                  The network fabric underlying the fully-connected omnichain
+                  ecosystem{' '}
+                </h1>
                 <p>
-                  Developers will be able to write
-                  seamless inter-chain applications like DEX or yield aggregator without worrying about differing semantics between inter- and intra-chain transactions.
+                  Developers will be able to write seamless inter-chain
+                  applications like DEX or yield aggregator without worrying
+                  about differing semantics between inter- and intra-chain
+                  transactions.
                 </p>
                 {/* <button
                   className="btn btn-4 hover-border-7"
@@ -200,8 +260,9 @@ const Page = () => {
           <ul className="pagination">
             {navList.map((item, index) => (
               <li
-                className={`pagination__item ${item && 'pagination__item--active'
-                  }`}
+                className={`pagination__item ${
+                  item && 'pagination__item--active'
+                }`}
                 onClick={() => next(index)}
               >
                 <a className="pagination__button"></a>
@@ -280,7 +341,7 @@ const Page = () => {
           />
         </Drawer>
       </div>
-    </div >
+    </div>
   );
 };
 
