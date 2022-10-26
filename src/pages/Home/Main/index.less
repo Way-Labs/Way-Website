@@ -12,7 +12,8 @@
         padding-left: 15%;
         position: relative;
 
-        h1 {
+        h1,
+        span {
           font-family: 'Timmana', sans-serif;
           font-size: 50px;
           position: relative;
@@ -38,7 +39,7 @@
         min-width: 50%;
         position: relative;
 
-        &>div {
+        & > div {
           position: absolute;
           top: 0;
           left: 0;
@@ -48,31 +49,32 @@
       }
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width: 1000px) {
       .plan1 {
         background: #000;
         flex-direction: column-reverse;
         .left {
           justify-content: unset;
-          padding:0 5%;
+          padding: 0 5%;
           h1 {
             font-size: 20px;
           }
         }
-        .right{
+        .right {
           flex: 1;
           min-height: 50%;
         }
       }
-      .pagination{
+      .pagination {
         top: -30px;
       }
-      .header{
+      .header {
         padding: 30px;
       }
     }
 
-    .plan4 {}
+    .plan4 {
+    }
 
     .codemain {
       position: absolute;
