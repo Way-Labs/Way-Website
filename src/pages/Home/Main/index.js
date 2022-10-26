@@ -16,7 +16,7 @@ import styles from './index.less';
 import theme from './theme';
 import codeData from './code';
 var letters = [];
-let t = 'Omnichain Asset and Data Interoperational Protocol';
+let t = 'Zero-Knowledge Omnichain Asset and Data Interoperation Network';
 for (let i = 0; i < t.length; i++) {
   letters.push({
     flag: true,
@@ -160,8 +160,8 @@ const Page = () => {
 
                 <p className="swiper-no-swiping">
                   Way Network achieves the multichain asset and data
-                  interoperability based on zkRayler, ZK Verifier, IPFS, Sender,
-                  and Receiver.
+                  zero-knowledge interoperability based on zkRayler, ZK
+                  Verifier, IPFS, Sender, and Receiver.
                 </p>
                 {/* <button
                   className="btn btn-4 hover-border-7"
@@ -185,12 +185,12 @@ const Page = () => {
             <div className="swiper-slide plan1">
               <div className="left textsmall ">
                 <h1 className="swiper-no-swiping">
-                  The native communication integrated with distributed computing
-                  and storage
+                  The native zero-knowledge communication integrated with
+                  permissionless computing and storage
                 </h1>
                 <p className="swiper-no-swiping">
                   The Way Endpoint is encapsulated in Communication, Validation,
-                  and Network, which orchestrates the data by the distributed
+                  and Network, which orchestrates the data by the permissionless
                   computing and storage between any pair of nodes.
                 </p>
                 {/* <button
@@ -208,8 +208,8 @@ const Page = () => {
             <div className="swiper-slide plan1">
               <div className="left textsmall">
                 <h1 className="swiper-no-swiping">
-                  The ideal solution to enable cross-chain transactions with
-                  trustless valid delivery{' '}
+                  The universal solution to enable cross-chain transaction with
+                  trustless and valid delivery
                 </h1>
                 <p className="swiper-no-swiping">
                   The way communication protocol is the preferred method of
@@ -232,8 +232,8 @@ const Page = () => {
             <div className="swiper-slide plan1">
               <div className="left textsmall">
                 <h1 className="swiper-no-swiping">
-                  The network fabric underlying the fully-connected omnichain
-                  ecosystem{' '}
+                  The decentralized network fabric underlying the fully
+                  connected omnichain ecosystem
                 </h1>
                 <p className="swiper-no-swiping">
                   Developers will be able to write seamless inter-chain

@@ -34783,7 +34783,7 @@
           },
         },
         zr = [],
-        Vr = 'Omnichain Asset and Data Interoperational Protocol',
+        Vr = 'Zero-Knowledge Omnichain Asset and Data Interoperation Network',
         qr = 0;
       qr < Vr.length;
       qr++
@@ -34892,7 +34892,7 @@
                             Object(an['jsx'])('p', {
                               className: 'swiper-no-swiping',
                               children:
-                                'Way Network achieves the multichain asset and data interoperability based on zkRayler, ZK Verifier, IPFS, Sender, and Receiver.',
+                                'Way Network achieves the multichain asset and data zero-knowledge interoperability based on zkRayler, ZK Verifier, IPFS, Sender, and Receiver.',
                             }),
                             Object(an['jsx'])('div', {
                               children: Object(an['jsx'])('a', {
@@ -34929,12 +34929,12 @@
                             Object(an['jsx'])('h1', {
                               className: 'swiper-no-swiping',
                               children:
-                                'The native communication integrated with distributed computing and storage',
+                                'The native zero-knowledge communication integrated with permissionless computing and storage',
                             }),
                             Object(an['jsx'])('p', {
                               className: 'swiper-no-swiping',
                               children:
-                                'The Way Endpoint is encapsulated in Communication, Validation, and Network, which orchestrates the data by the distributed computing and storage between any pair of nodes.',
+                                'The Way Endpoint is encapsulated in Communication, Validation, and Network, which orchestrates the data by the permissionless computing and storage between any pair of nodes.',
                             }),
                           ],
                         }),
@@ -34952,12 +34952,10 @@
                         Object(an['jsxs'])('div', {
                           className: 'left textsmall',
                           children: [
-                            Object(an['jsxs'])('h1', {
+                            Object(an['jsx'])('h1', {
                               className: 'swiper-no-swiping',
-                              children: [
-                                'The ideal solution to enable cross-chain transactions with trustless valid delivery',
-                                ' ',
-                              ],
+                              children:
+                                'The universal solution to enable cross-chain transaction with trustless and valid delivery',
                             }),
                             Object(an['jsx'])('p', {
                               className: 'swiper-no-swiping',
@@ -34980,12 +34978,10 @@
                         Object(an['jsxs'])('div', {
                           className: 'left textsmall',
                           children: [
-                            Object(an['jsxs'])('h1', {
+                            Object(an['jsx'])('h1', {
                               className: 'swiper-no-swiping',
-                              children: [
-                                'The network fabric underlying the fully-connected omnichain ecosystem',
-                                ' ',
-                              ],
+                              children:
+                                'The decentralized network fabric underlying the fully connected omnichain ecosystem',
                             }),
                             Object(an['jsx'])('p', {
                               className: 'swiper-no-swiping',
