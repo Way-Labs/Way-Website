@@ -9,6 +9,7 @@ import { ReactComponent as Medium } from '@/assets/medium.svg';
 import { ReactComponent as Telegram } from '@/assets/telegram.svg';
 import { ReactComponent as Youtube } from '@/assets/youtube.svg';
 import { ReactComponent as Paper } from '@/assets/paper.svg';
+import { ReactComponent as Gitbook } from '@/assets/gitbook.svg';
 import Menu from '../Menu';
 
 import { CopyBlock } from 'react-code-blocks';
@@ -145,11 +146,13 @@ const Page = () => {
                     onMouseEnter={handleMouseEnter}
                     className="swiper-no-swiping"
                   >
-                    {aniText.map((item) => (
+                    {/* {aniText.map((item) => (
                       <span className="nbr ltr">
                         {(item.num == 2 && item.text) || item.num}
                       </span>
-                    ))}
+                    ))} */}
+                    Zero-Knowledge Omnichain Asset and Data Interoperation
+                    Network
                   </h1>
                   {/* <h1>
                     Omnichain Asset and Data Interoperational Protocol
@@ -287,7 +290,7 @@ const Page = () => {
                   title="Twitter"
                 >
                   <Twitter />
-                </a>{' '}
+                </a>
               </li>
               <li>
                 <a
@@ -296,23 +299,27 @@ const Page = () => {
                   title="Telegram"
                 >
                   <Telegram />
-                </a>{' '}
+                </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" title="Discord">
                   <Discord />
-                </a>{' '}
-              </li>
+                </a>
+              </li> */}
               <li>
-                <a href="#" title="Medium">
-                  <Medium />
-                </a>{' '}
+                <a
+                  target="_blank"
+                  href="https://way-networks-organization.gitbook.io/way-network/"
+                  title="Gitbook"
+                >
+                  <Gitbook />
+                </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" title="Youtube">
                   <Youtube />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </footer>

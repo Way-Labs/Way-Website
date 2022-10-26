@@ -30408,7 +30408,7 @@
     'use strict';
     n.r(t),
       n.d(t, 'default', function () {
-        return Gr;
+        return br;
       });
     n('EFp3'), n('CWI+');
     var r,
@@ -32372,8 +32372,7 @@
         (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
       return o;
     }
-    var st,
-      ft = function (e) {
+    var st = function (e) {
         var t = e.svgRef,
           n = e.title,
           r = ct(e, ['svgRef', 'title']);
@@ -32418,9 +32417,12 @@
           ot || (ot = c.a.createElement('g', null)),
         );
       },
-      dt = c.a.forwardRef(function (e, t) {
-        return c.a.createElement(ft, ut({ svgRef: t }, e));
+      ft = c.a.forwardRef(function (e, t) {
+        return c.a.createElement(st, ut({ svgRef: t }, e));
       });
+    n.p;
+    n.p;
+    var dt;
     n.p;
     function pt() {
       return (
@@ -32462,33 +32464,29 @@
         (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
       return o;
     }
-    var gt,
-      yt = function (e) {
+    var gt = function (e) {
         var t = e.svgRef,
           n = e.title,
           r = ht(e, ['svgRef', 'title']);
         return c.a.createElement(
           'svg',
           pt(
-            {
-              width: '24px',
-              height: '24px',
-              viewBox: '0 0 24 24',
-              role: 'img',
-              ref: t,
-            },
+            { width: '48px', height: '48px', viewBox: '0 0 48 48', ref: t },
             r,
           ),
           n ? c.a.createElement('title', null, n) : null,
-          st ||
-            (st = c.a.createElement('path', {
-              d: 'M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z',
+          dt ||
+            (dt = c.a.createElement('path', {
+              d: 'M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z',
             })),
         );
       },
-      mt = c.a.forwardRef(function (e, t) {
-        return c.a.createElement(yt, pt({ svgRef: t }, e));
+      yt = c.a.forwardRef(function (e, t) {
+        return c.a.createElement(gt, pt({ svgRef: t }, e));
       });
+    n.p;
+    n.p;
+    var mt;
     n.p;
     function bt() {
       return (
@@ -32539,23 +32537,19 @@
           'svg',
           bt(
             {
-              width: '256px',
-              height: '256px',
-              viewBox: '0 -55 256 256',
-              preserveAspectRatio: 'xMidYMid',
+              width: '24px',
+              height: '24px',
+              viewBox: '0 0 24 24',
+              role: 'img',
               ref: t,
             },
             r,
           ),
           n ? c.a.createElement('title', null, n) : null,
-          gt ||
-            (gt = c.a.createElement(
-              'g',
-              null,
-              c.a.createElement('path', {
-                d: 'M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z',
-              }),
-            )),
+          mt ||
+            (mt = c.a.createElement('path', {
+              d: 'M10.802 17.77a.703.703 0 1 1-.002 1.406.703.703 0 0 1 .002-1.406m11.024-4.347a.703.703 0 1 1 .001-1.406.703.703 0 0 1-.001 1.406m0-2.876a2.176 2.176 0 0 0-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165 0 0 0-1.784-.937c-.829 0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474 0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175 0 0 0 2.15 1.862 2.177 2.177 0 0 0 2.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176 0 0 0 24 12.72a2.176 2.176 0 0 0-2.174-2.174',
+            })),
         );
       },
       kt = c.a.forwardRef(function (e, t) {
@@ -32602,232 +32596,64 @@
         (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
       return o;
     }
-    var _t,
-      Pt,
-      At,
-      Tt,
-      Rt,
-      Nt,
-      It,
-      Mt,
-      Lt,
-      Ft,
-      Dt,
-      Ut,
-      Bt,
-      zt,
-      Vt,
-      qt,
-      Wt = function (e) {
+    var _t = function (e) {
         var t = e.svgRef,
           n = e.title,
           r = jt(e, ['svgRef', 'title']);
         return c.a.createElement(
           'svg',
-          St(
-            { width: '48px', height: '48px', viewBox: '0 0 48 48', ref: t },
-            r,
-          ),
+          St({ height: 48, width: 48, viewBox: '0 0 48 48', ref: t }, r),
           n ? c.a.createElement('title', null, n) : null,
           Ot ||
             (Ot = c.a.createElement('path', {
-              d: 'M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z',
-            })),
-        );
-      },
-      Ht = c.a.forwardRef(function (e, t) {
-        return c.a.createElement(Wt, St({ svgRef: t }, e));
-      });
-    n.p;
-    function Gt() {
-      return (
-        (Gt =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var r in n)
-                Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-            }
-            return e;
-          }),
-        Gt.apply(this, arguments)
-      );
-    }
-    function $t(e, t) {
-      if (null == e) return {};
-      var n,
-        r,
-        o = Yt(e, t);
-      if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-          (n = a[r]),
-            t.indexOf(n) >= 0 ||
-              (Object.prototype.propertyIsEnumerable.call(e, n) &&
-                (o[n] = e[n]));
-      }
-      return o;
-    }
-    function Yt(e, t) {
-      if (null == e) return {};
-      var n,
-        r,
-        o = {},
-        a = Object.keys(e);
-      for (r = 0; r < a.length; r++)
-        (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-      return o;
-    }
-    var Kt = function (e) {
-        var t = e.svgRef,
-          n = e.title,
-          r = $t(e, ['svgRef', 'title']);
-        return c.a.createElement(
-          'svg',
-          Gt(
-            {
-              id: 'Layer_1',
-              x: '0px',
-              y: '0px',
-              viewBox: '0 0 310 310',
-              style: { enableBackground: 'new 0 0 310 310' },
-              xmlSpace: 'preserve',
-              ref: t,
-            },
-            r,
-          ),
-          n ? c.a.createElement('title', null, n) : null,
-          _t ||
-            (_t = c.a.createElement(
-              'g',
-              { id: 'XMLID_822_' },
-              c.a.createElement('path', {
-                id: 'XMLID_823_',
-                d: 'M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938 C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527 C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991 c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764 c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861 C204.394,157.263,202.325,160.684,199.021,162.41z',
-              }),
-            )),
-          Pt || (Pt = c.a.createElement('g', null)),
-          At || (At = c.a.createElement('g', null)),
-          Tt || (Tt = c.a.createElement('g', null)),
-          Rt || (Rt = c.a.createElement('g', null)),
-          Nt || (Nt = c.a.createElement('g', null)),
-          It || (It = c.a.createElement('g', null)),
-          Mt || (Mt = c.a.createElement('g', null)),
-          Lt || (Lt = c.a.createElement('g', null)),
-          Ft || (Ft = c.a.createElement('g', null)),
-          Dt || (Dt = c.a.createElement('g', null)),
-          Ut || (Ut = c.a.createElement('g', null)),
-          Bt || (Bt = c.a.createElement('g', null)),
-          zt || (zt = c.a.createElement('g', null)),
-          Vt || (Vt = c.a.createElement('g', null)),
-          qt || (qt = c.a.createElement('g', null)),
-        );
-      },
-      Qt = c.a.forwardRef(function (e, t) {
-        return c.a.createElement(Kt, Gt({ svgRef: t }, e));
-      });
-    n.p;
-    var Zt;
-    n.p;
-    function Jt() {
-      return (
-        (Jt =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var r in n)
-                Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-            }
-            return e;
-          }),
-        Jt.apply(this, arguments)
-      );
-    }
-    function Xt(e, t) {
-      if (null == e) return {};
-      var n,
-        r,
-        o = en(e, t);
-      if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-          (n = a[r]),
-            t.indexOf(n) >= 0 ||
-              (Object.prototype.propertyIsEnumerable.call(e, n) &&
-                (o[n] = e[n]));
-      }
-      return o;
-    }
-    function en(e, t) {
-      if (null == e) return {};
-      var n,
-        r,
-        o = {},
-        a = Object.keys(e);
-      for (r = 0; r < a.length; r++)
-        (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-      return o;
-    }
-    var tn = function (e) {
-        var t = e.svgRef,
-          n = e.title,
-          r = Xt(e, ['svgRef', 'title']);
-        return c.a.createElement(
-          'svg',
-          Jt({ height: 48, width: 48, viewBox: '0 0 48 48', ref: t }, r),
-          n ? c.a.createElement('title', null, n) : null,
-          Zt ||
-            (Zt = c.a.createElement('path', {
               d: 'M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z',
             })),
         );
       },
-      nn = c.a.forwardRef(function (e, t) {
-        return c.a.createElement(tn, Jt({ svgRef: t }, e));
+      Pt = c.a.forwardRef(function (e, t) {
+        return c.a.createElement(_t, St({ svgRef: t }, e));
       }),
-      rn = (n.p, n('w6z3')),
-      on = n.n(rn),
-      an = n('nKUr'),
-      un = () =>
-        Object(an['jsx'])('div', {
-          className: on.a.page,
-          children: Object(an['jsxs'])('nav', {
+      At = (n.p, n('w6z3')),
+      Tt = n.n(At),
+      Rt = n('nKUr'),
+      Nt = () =>
+        Object(Rt['jsx'])('div', {
+          className: Tt.a.page,
+          children: Object(Rt['jsxs'])('nav', {
             id: 'menu',
             children: [
-              Object(an['jsxs'])('div', {
+              Object(Rt['jsxs'])('div', {
                 className: 'menu-item',
                 children: [
-                  Object(an['jsx'])('div', {
+                  Object(Rt['jsx'])('div', {
                     className: 'menu-text',
-                    children: Object(an['jsxs'])('a', {
+                    children: Object(Rt['jsxs'])('a', {
                       href: '#',
-                      children: ['Developers', Object(an['jsx'])(nn, {})],
+                      children: ['Developers', Object(Rt['jsx'])(Pt, {})],
                     }),
                   }),
-                  Object(an['jsxs'])('div', {
+                  Object(Rt['jsxs'])('div', {
                     className: 'sub-menu triple',
                     style: { height: '20em' },
                     children: [
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'top-container gb c icon-box',
                         style: { height: '3em' },
                         children: [
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'icon big',
-                            children: Object(an['jsx'])('i', {
+                            children: Object(Rt['jsx'])('i', {
                               className: 'far fa-book',
                             }),
                           }),
-                          Object(an['jsxs'])('div', {
+                          Object(Rt['jsxs'])('div', {
                             className: 'text',
                             children: [
-                              Object(an['jsx'])('div', {
+                              Object(Rt['jsx'])('div', {
                                 className: 'title',
                                 children: 'Where to start',
                               }),
-                              Object(an['jsx'])('div', {
+                              Object(Rt['jsx'])('div', {
                                 className: 'sub-text',
                                 children: 'How to start the development',
                               }),
@@ -32835,64 +32661,64 @@
                           }),
                         ],
                       }),
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'box',
                         children: [
-                          Object(an['jsx'])('h3', { children: 'Your Journey' }),
-                          Object(an['jsx'])('a', {
+                          Object(Rt['jsx'])('h3', { children: 'Your Journey' }),
+                          Object(Rt['jsx'])('a', {
                             href: '#',
                             children: 'Get Started',
                           }),
-                          Object(an['jsx'])('a', {
+                          Object(Rt['jsx'])('a', {
                             href: '#',
                             children: 'Learn the Basics',
                           }),
-                          Object(an['jsx'])('a', {
+                          Object(Rt['jsx'])('a', {
                             href: '#',
                             children: 'Get Advanced',
                           }),
                         ],
                       }),
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'box',
                         children: [
-                          Object(an['jsx'])('h3', { children: 'Your Tools' }),
-                          Object(an['jsx'])('a', {
+                          Object(Rt['jsx'])('h3', { children: 'Your Tools' }),
+                          Object(Rt['jsx'])('a', {
                             href: '#',
                             children: 'Turbo Editor',
                           }),
-                          Object(an['jsx'])('a', {
+                          Object(Rt['jsx'])('a', {
                             href: '#',
                             children: 'Time Stopper',
                           }),
-                          Object(an['jsx'])('a', {
+                          Object(Rt['jsx'])('a', {
                             href: '#',
                             children: 'Brain Enhancer',
                           }),
                         ],
                       }),
-                      Object(an['jsx'])('div', {
+                      Object(Rt['jsx'])('div', {
                         style: { width: '100%', height: '1em' },
                       }),
-                      Object(an['jsx'])('div', {
+                      Object(Rt['jsx'])('div', {
                         style: { width: '100%', height: '1em' },
                       }),
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'icon-box flat',
                         children: [
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'icon',
-                            children: Object(an['jsx'])('i', {
+                            children: Object(Rt['jsx'])('i', {
                               className: 'fal fa-plug',
                             }),
                           }),
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'text',
-                            children: Object(an['jsxs'])('div', {
+                            children: Object(Rt['jsxs'])('div', {
                               className: 'title',
                               children: [
                                 'API Guide ',
-                                Object(an['jsx'])('i', {
+                                Object(Rt['jsx'])('i', {
                                   className: 'far fa-arrow-right',
                                 }),
                               ],
@@ -32900,22 +32726,22 @@
                           }),
                         ],
                       }),
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'icon-box flat',
                         children: [
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'icon',
-                            children: Object(an['jsx'])('i', {
+                            children: Object(Rt['jsx'])('i', {
                               className: 'fal fa-comments',
                             }),
                           }),
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'text',
-                            children: Object(an['jsxs'])('div', {
+                            children: Object(Rt['jsxs'])('div', {
                               className: 'title',
                               children: [
                                 'Support Line ',
-                                Object(an['jsx'])('i', {
+                                Object(Rt['jsx'])('i', {
                                   className: 'far fa-arrow-right',
                                 }),
                               ],
@@ -32923,22 +32749,22 @@
                           }),
                         ],
                       }),
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'icon-box flat',
                         children: [
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'icon',
-                            children: Object(an['jsx'])('i', {
+                            children: Object(Rt['jsx'])('i', {
                               className: 'fal fa-phone-volume',
                             }),
                           }),
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'text',
-                            children: Object(an['jsxs'])('div', {
+                            children: Object(Rt['jsxs'])('div', {
                               className: 'title',
                               children: [
                                 'Live Chat ',
-                                Object(an['jsx'])('i', {
+                                Object(Rt['jsx'])('i', {
                                   className: 'far fa-arrow-right',
                                 }),
                               ],
@@ -32946,22 +32772,22 @@
                           }),
                         ],
                       }),
-                      Object(an['jsxs'])('div', {
+                      Object(Rt['jsxs'])('div', {
                         className: 'icon-box flat',
                         children: [
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'icon',
-                            children: Object(an['jsx'])('i', {
+                            children: Object(Rt['jsx'])('i', {
                               className: 'fal fa-book-spells',
                             }),
                           }),
-                          Object(an['jsx'])('div', {
+                          Object(Rt['jsx'])('div', {
                             className: 'text',
-                            children: Object(an['jsxs'])('div', {
+                            children: Object(Rt['jsxs'])('div', {
                               className: 'title',
                               children: [
                                 'Documentation ',
-                                Object(an['jsx'])('i', {
+                                Object(Rt['jsx'])('i', {
                                   className: 'far fa-arrow-right',
                                 }),
                               ],
@@ -32973,21 +32799,21 @@
                   }),
                 ],
               }),
-              Object(an['jsx'])('div', {
+              Object(Rt['jsx'])('div', {
                 className: 'menu-item',
-                children: Object(an['jsx'])('div', {
+                children: Object(Rt['jsx'])('div', {
                   className: 'menu-text',
-                  children: Object(an['jsx'])('a', {
+                  children: Object(Rt['jsx'])('a', {
                     href: '#',
                     children: 'Ecosystem',
                   }),
                 }),
               }),
-              Object(an['jsx'])('div', {
+              Object(Rt['jsx'])('div', {
                 className: 'menu-item',
-                children: Object(an['jsx'])('div', {
+                children: Object(Rt['jsx'])('div', {
                   className: 'menu-text',
-                  children: Object(an['jsx'])('a', {
+                  children: Object(Rt['jsx'])('a', {
                     href: '#',
                     children: 'Community',
                   }),
@@ -32996,48 +32822,48 @@
             ],
           }),
         }),
-      cn = un,
-      ln = n('vOnD'),
-      sn = n('7xgE'),
-      fn = n.n(sn),
-      dn = n('Ym8P'),
-      pn = n.n(dn),
-      hn = n('OFg/'),
-      vn = n.n(hn),
-      gn = n('JzCI'),
-      yn = n.n(gn),
-      mn = n('ItQ7'),
-      bn = n.n(mn),
-      wn = n('BOUb'),
-      xn = n.n(wn),
-      On = n('b4pr'),
-      En = n.n(On),
-      kn = n('JhXm'),
-      Sn = n.n(kn),
-      jn = n('r8Ek'),
-      Cn = n.n(jn),
-      _n = n('Cvn4'),
-      Pn = n.n(_n),
-      An = n('VsRW'),
-      Tn = n.n(An);
-    function Rn(e) {
+      It = Nt,
+      Mt = n('vOnD'),
+      Lt = n('7xgE'),
+      Ft = n.n(Lt),
+      Dt = n('Ym8P'),
+      Ut = n.n(Dt),
+      Bt = n('OFg/'),
+      zt = n.n(Bt),
+      Vt = n('JzCI'),
+      qt = n.n(Vt),
+      Wt = n('ItQ7'),
+      Ht = n.n(Wt),
+      Gt = n('BOUb'),
+      $t = n.n(Gt),
+      Yt = n('b4pr'),
+      Kt = n.n(Yt),
+      Qt = n('JhXm'),
+      Zt = n.n(Qt),
+      Jt = n('r8Ek'),
+      Xt = n.n(Jt),
+      en = n('Cvn4'),
+      tn = n.n(en),
+      nn = n('VsRW'),
+      rn = n.n(nn);
+    function on(e) {
       var t =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 ? arguments[2] : void 0;
       return e.reduce(function (e, t) {
-        return Tn()({}, e, n[t]);
+        return rn()({}, e, n[t]);
       }, t);
     }
-    function Nn(e) {
+    function an(e) {
       return e.join(' ');
     }
-    function In(e, t) {
+    function un(e, t) {
       var n = 0;
       return function (r) {
         return (
           (n += 1),
           r.map(function (r, o) {
-            return Mn({
+            return cn({
               node: r,
               stylesheet: e,
               useInlineStyles: t,
@@ -33047,7 +32873,7 @@
         );
       };
     }
-    function Mn(e) {
+    function cn(e) {
       var t = e.node,
         n = e.stylesheet,
         r = e.style,
@@ -33060,7 +32886,7 @@
         f = t.value;
       if ('text' === l) return f;
       if (s) {
-        var d = In(n, a),
+        var d = un(n, a),
           p =
             a &&
             u.className &&
@@ -33069,22 +32895,22 @@
             }),
           h = p && p.length ? p : void 0,
           v = a
-            ? Tn()(
+            ? rn()(
                 {},
                 u,
-                { className: h && Nn(h) },
-                { style: Rn(u.className, Object.assign({}, u.style, o), n) },
+                { className: h && an(h) },
+                { style: on(u.className, Object.assign({}, u.style, o), n) },
               )
-            : Tn()({}, u, { className: Nn(u.className) }),
+            : rn()({}, u, { className: an(u.className) }),
           g = d(t.children);
-        return c.a.createElement(s, vn()({ key: i }, v), g);
+        return c.a.createElement(s, zt()({ key: i }, v), g);
       }
     }
-    var Ln = /\n/g;
-    function Fn(e) {
-      return e.match(Ln);
+    var ln = /\n/g;
+    function sn(e) {
+      return e.match(ln);
     }
-    function Dn(e) {
+    function fn(e) {
       var t = e.lines,
         n = e.startingLineNumber,
         r = e.numberProps,
@@ -33094,7 +32920,7 @@
           a = 'function' === typeof o ? o(r) : o;
         return c.a.createElement(
           'span',
-          vn()(
+          zt()(
             {
               key: 'line-'.concat(t),
               className: 'react-syntax-highlighter-line-number',
@@ -33105,7 +32931,7 @@
         );
       });
     }
-    function Un(e) {
+    function dn(e) {
       var t = e.codeString,
         n = e.codeStyle,
         r = e.containerProps,
@@ -33116,8 +32942,8 @@
         (o.style = o.style || { float: 'left', paddingRight: '10px' }),
         c.a.createElement(
           'code',
-          vn()({}, o, { style: Object.assign({}, n, o.style) }),
-          Dn({
+          zt()({}, o, { style: Object.assign({}, n, o.style) }),
+          fn({
             lines: t.replace(/\n$/, '').split('\n'),
             numberProps: a,
             startingLineNumber: i,
@@ -33125,7 +32951,7 @@
         )
       );
     }
-    function Bn(e) {
+    function pn(e) {
       var t = e.children,
         n = e.lineNumber,
         r = e.lineProps,
@@ -33137,7 +32963,7 @@
         { type: 'element', tagName: 'span', properties: i, children: t }
       );
     }
-    function zn(e) {
+    function hn(e) {
       for (
         var t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -33148,23 +32974,23 @@
         r++
       ) {
         var o = e[r];
-        if ('text' === o.type) n.push(Bn({ children: [o], className: t }));
+        if ('text' === o.type) n.push(pn({ children: [o], className: t }));
         else if (o.children) {
           var a = t.concat(o.properties.className);
-          n = n.concat(zn(o.children, a));
+          n = n.concat(hn(o.children, a));
         }
       }
       return n;
     }
-    function Vn(e, t) {
-      var n = zn(e.value),
+    function vn(e, t) {
+      var n = hn(e.value),
         r = [],
         o = -1,
         a = 0,
         i = function () {
           var e = n[a],
             i = e.children[0].value,
-            u = Fn(i);
+            u = sn(i);
           if (u) {
             var c = i.split('\n');
             c.forEach(function (i, u) {
@@ -33174,21 +33000,21 @@
                 var f = n
                   .slice(o + 1, a)
                   .concat(
-                    Bn({ children: [s], className: e.properties.className }),
+                    pn({ children: [s], className: e.properties.className }),
                   );
-                r.push(Bn({ children: f, lineNumber: l, lineProps: t }));
+                r.push(pn({ children: f, lineNumber: l, lineProps: t }));
               } else if (u === c.length - 1) {
                 var d = n[a + 1] && n[a + 1].children && n[a + 1].children[0];
                 if (d) {
                   var p = { type: 'text', value: ''.concat(i) },
-                    h = Bn({
+                    h = pn({
                       children: [p],
                       className: e.properties.className,
                     });
                   n.splice(a + 1, 0, h);
                 } else
                   r.push(
-                    Bn({
+                    pn({
                       children: [s],
                       lineNumber: l,
                       lineProps: t,
@@ -33197,7 +33023,7 @@
                   );
               } else
                 r.push(
-                  Bn({
+                  pn({
                     children: [s],
                     lineNumber: l,
                     lineProps: t,
@@ -33214,16 +33040,16 @@
         var u = n.slice(o + 1, n.length);
         u &&
           u.length &&
-          r.push(Bn({ children: u, lineNumber: r.length + 1, lineProps: t }));
+          r.push(pn({ children: u, lineNumber: r.length + 1, lineProps: t }));
       }
       return r;
     }
-    function qn(e) {
+    function gn(e) {
       var t = e.rows,
         n = e.stylesheet,
         r = e.useInlineStyles;
       return t.map(function (e, t) {
-        return Mn({
+        return cn({
           node: e,
           stylesheet: n,
           useInlineStyles: r,
@@ -33231,7 +33057,7 @@
         });
       });
     }
-    function Wn(e) {
+    function yn(e) {
       var t = e.astGenerator,
         n = e.language,
         r = e.code,
@@ -33250,7 +33076,7 @@
         return { value: o };
       }
     }
-    var Hn = function (e, t) {
+    var mn = function (e, t) {
         return function (n) {
           var r = n.language,
             o = n.children,
@@ -33279,7 +33105,7 @@
             _ = n.code,
             P = void 0 === _ ? (Array.isArray(o) ? o[0] : o) : _,
             A = n.astGenerator,
-            T = Pn()(n, [
+            T = tn()(n, [
               'language',
               'children',
               'style',
@@ -33300,7 +33126,7 @@
             ]);
           A = A || e;
           var R = v
-              ? c.a.createElement(Un, {
+              ? c.a.createElement(dn, {
                   containerProps: m,
                   codeStyle: f.style || {},
                   numberProps: b,
@@ -33314,16 +33140,16 @@
               ? Object.assign({}, T, { style: Object.assign({}, N, l) })
               : Object.assign({}, T, { className: 'hljs' });
           if (!A) return c.a.createElement(S, I, R, c.a.createElement(C, f, P));
-          (w = !(!E || void 0 !== w) || w), (E = E || qn);
+          (w = !(!E || void 0 !== w) || w), (E = E || gn);
           var M = [{ type: 'text', value: P }],
-            L = Wn({
+            L = yn({
               astGenerator: A,
               language: r,
               code: P,
               defaultCodeValue: M,
             });
           null === L.language && (L.value = M);
-          var F = w ? Vn(L, O) : L.value;
+          var F = w ? vn(L, O) : L.value;
           return c.a.createElement(
             S,
             I,
@@ -33336,7 +33162,7 @@
           );
         };
       },
-      Gn = function (e) {
+      bn = function (e) {
         var t = e.loader,
           n = e.isLanguageRegistered,
           r = e.registerLanguage,
@@ -33344,11 +33170,11 @@
           a = e.noAsyncLoadingLanguages,
           i = (function (e) {
             function n() {
-              return yn()(this, n), xn()(this, En()(n).apply(this, arguments));
+              return qt()(this, n), $t()(this, Kt()(n).apply(this, arguments));
             }
             return (
-              Sn()(n, e),
-              bn()(
+              Zt()(n, e),
+              Ht()(
                 n,
                 [
                   {
@@ -33395,7 +33221,7 @@
                     value: function () {
                       return c.a.createElement(
                         n.highlightInstance,
-                        vn()({}, this.props, {
+                        zt()({}, this.props, {
                           language: this.normalizeLanguage(this.props.language),
                           astGenerator: n.astGenerator,
                         }),
@@ -33413,10 +33239,10 @@
                   {
                     key: 'loadLanguage',
                     value: (function () {
-                      var e = pn()(
-                        fn.a.mark(function e(t) {
+                      var e = Ut()(
+                        Ft.a.mark(function e(t) {
                           var r;
-                          return fn.a.wrap(
+                          return Ft.a.wrap(
                             function (e) {
                               while (1)
                                 switch ((e.prev = e.next)) {
@@ -33475,16 +33301,16 @@
             );
           })(c.a.PureComponent);
         return (
-          Cn()(i, 'astGenerator', null),
-          Cn()(i, 'highlightInstance', Hn(null, {})),
-          Cn()(i, 'astGeneratorPromise', null),
-          Cn()(i, 'languages', new Map()),
-          Cn()(
+          Xt()(i, 'astGenerator', null),
+          Xt()(i, 'highlightInstance', mn(null, {})),
+          Xt()(i, 'astGeneratorPromise', null),
+          Xt()(i, 'languages', new Map()),
+          Xt()(
             i,
             'supportedLanguages',
             e.supportedLanguages || Object.keys(o || {}),
           ),
-          Cn()(i, 'isRegistered', function (e) {
+          Xt()(i, 'isRegistered', function (e) {
             if (a) return !0;
             if (!r)
               throw new Error(
@@ -33492,7 +33318,7 @@
               );
             return i.astGenerator ? n(i.astGenerator, e) : i.languages.has(e);
           }),
-          Cn()(i, 'registerLanguage', function (e, t) {
+          Xt()(i, 'registerLanguage', function (e, t) {
             if (!r)
               throw new Error(
                 "Current syntax highlighter doesn't support registration of languages",
@@ -33503,12 +33329,12 @@
           i
         );
       },
-      $n = function (e, t) {
+      wn = function (e, t) {
         return (function () {
-          var n = pn()(
-            fn.a.mark(function n(r) {
+          var n = Ut()(
+            Ft.a.mark(function n(r) {
               var o;
-              return fn.a.wrap(
+              return Ft.a.wrap(
                 function (n) {
                   while (1)
                     switch ((n.prev = n.next)) {
@@ -33531,462 +33357,462 @@
           };
         })();
       },
-      Yn = {
-        abap: $n('abap', function () {
+      xn = {
+        abap: wn('abap', function () {
           return n.e(0).then(n.t.bind(null, 'h9ot', 7));
         }),
-        actionscript: $n('actionscript', function () {
+        actionscript: wn('actionscript', function () {
           return n.e(1).then(n.t.bind(null, 'BK6e', 7));
         }),
-        ada: $n('ada', function () {
+        ada: wn('ada', function () {
           return n.e(2).then(n.t.bind(null, 'rQez', 7));
         }),
-        apacheconf: $n('apacheconf', function () {
+        apacheconf: wn('apacheconf', function () {
           return n.e(3).then(n.t.bind(null, 'c0d7', 7));
         }),
-        apl: $n('apl', function () {
+        apl: wn('apl', function () {
           return n.e(4).then(n.t.bind(null, '+KGI', 7));
         }),
-        applescript: $n('applescript', function () {
+        applescript: wn('applescript', function () {
           return n.e(5).then(n.t.bind(null, 'LcBK', 7));
         }),
-        arduino: $n('arduino', function () {
+        arduino: wn('arduino', function () {
           return n.e(6).then(n.t.bind(null, 'hQuw', 7));
         }),
-        arff: $n('arff', function () {
+        arff: wn('arff', function () {
           return n.e(7).then(n.t.bind(null, '80K2', 7));
         }),
-        asciidoc: $n('asciidoc', function () {
+        asciidoc: wn('asciidoc', function () {
           return n.e(8).then(n.t.bind(null, 'flTx', 7));
         }),
-        asm6502: $n('asm6502', function () {
+        asm6502: wn('asm6502', function () {
           return n.e(9).then(n.t.bind(null, 'ex7v', 7));
         }),
-        aspnet: $n('aspnet', function () {
+        aspnet: wn('aspnet', function () {
           return n.e(10).then(n.t.bind(null, 'cirD', 7));
         }),
-        autohotkey: $n('autohotkey', function () {
+        autohotkey: wn('autohotkey', function () {
           return n.e(11).then(n.t.bind(null, 'r77y', 7));
         }),
-        autoit: $n('autoit', function () {
+        autoit: wn('autoit', function () {
           return n.e(12).then(n.t.bind(null, 'h6Os', 7));
         }),
-        bash: $n('bash', function () {
+        bash: wn('bash', function () {
           return n.e(13).then(n.t.bind(null, 'RoP8', 7));
         }),
-        basic: $n('basic', function () {
+        basic: wn('basic', function () {
           return n.e(14).then(n.t.bind(null, 'Zbb/', 7));
         }),
-        batch: $n('batch', function () {
+        batch: wn('batch', function () {
           return n.e(15).then(n.t.bind(null, 'kJUM', 7));
         }),
-        bison: $n('bison', function () {
+        bison: wn('bison', function () {
           return n.e(16).then(n.t.bind(null, '31EH', 7));
         }),
-        brainfuck: $n('brainfuck', function () {
+        brainfuck: wn('brainfuck', function () {
           return n.e(17).then(n.t.bind(null, 'czuR', 7));
         }),
-        bro: $n('bro', function () {
+        bro: wn('bro', function () {
           return n.e(18).then(n.t.bind(null, 'yBwc', 7));
         }),
-        c: $n('c', function () {
+        c: wn('c', function () {
           return n.e(19).then(n.t.bind(null, 'pr4O', 7));
         }),
-        clike: $n('clike', function () {
+        clike: wn('clike', function () {
           return n.e(20).then(n.t.bind(null, 'amLO', 7));
         }),
-        clojure: $n('clojure', function () {
+        clojure: wn('clojure', function () {
           return n.e(21).then(n.t.bind(null, 'XnOg', 7));
         }),
-        coffeescript: $n('coffeescript', function () {
+        coffeescript: wn('coffeescript', function () {
           return n.e(22).then(n.t.bind(null, 'Zyy6', 7));
         }),
-        cpp: $n('cpp', function () {
+        cpp: wn('cpp', function () {
           return n.e(23).then(n.t.bind(null, 'rDFf', 7));
         }),
-        crystal: $n('crystal', function () {
+        crystal: wn('crystal', function () {
           return n.e(24).then(n.t.bind(null, 'rFnP', 7));
         }),
-        csharp: $n('csharp', function () {
+        csharp: wn('csharp', function () {
           return n.e(25).then(n.t.bind(null, 'EGRD', 7));
         }),
-        csp: $n('csp', function () {
+        csp: wn('csp', function () {
           return n.e(26).then(n.t.bind(null, 'xkx2', 7));
         }),
-        cssExtras: $n('cssExtras', function () {
+        cssExtras: wn('cssExtras', function () {
           return n.e(28).then(n.t.bind(null, 'D+1R', 7));
         }),
-        css: $n('css', function () {
+        css: wn('css', function () {
           return n.e(27).then(n.t.bind(null, 'fwF+', 7));
         }),
-        d: $n('d', function () {
+        d: wn('d', function () {
           return n.e(29).then(n.t.bind(null, 'mX3B', 7));
         }),
-        dart: $n('dart', function () {
+        dart: wn('dart', function () {
           return n.e(30).then(n.t.bind(null, 'E4h5', 7));
         }),
-        diff: $n('diff', function () {
+        diff: wn('diff', function () {
           return n.e(31).then(n.t.bind(null, 'q9H2', 7));
         }),
-        django: $n('django', function () {
+        django: wn('django', function () {
           return n.e(32).then(n.t.bind(null, 'Wm63', 7));
         }),
-        docker: $n('docker', function () {
+        docker: wn('docker', function () {
           return n.e(33).then(n.t.bind(null, 'cJKJ', 7));
         }),
-        eiffel: $n('eiffel', function () {
+        eiffel: wn('eiffel', function () {
           return n.e(34).then(n.t.bind(null, '+4XU', 7));
         }),
-        elixir: $n('elixir', function () {
+        elixir: wn('elixir', function () {
           return n.e(35).then(n.t.bind(null, 'oBNv', 7));
         }),
-        elm: $n('elm', function () {
+        elm: wn('elm', function () {
           return n.e(36).then(n.t.bind(null, 'JidM', 7));
         }),
-        erb: $n('erb', function () {
+        erb: wn('erb', function () {
           return n.e(37).then(n.t.bind(null, 'JT+x', 7));
         }),
-        erlang: $n('erlang', function () {
+        erlang: wn('erlang', function () {
           return n.e(38).then(n.t.bind(null, 'cKbU', 7));
         }),
-        flow: $n('flow', function () {
+        flow: wn('flow', function () {
           return n.e(39).then(n.t.bind(null, 'ZpVt', 7));
         }),
-        fortran: $n('fortran', function () {
+        fortran: wn('fortran', function () {
           return n.e(40).then(n.t.bind(null, 'Q4s5', 7));
         }),
-        fsharp: $n('fsharp', function () {
+        fsharp: wn('fsharp', function () {
           return n.e(41).then(n.t.bind(null, 'mKfl', 7));
         }),
-        gedcom: $n('gedcom', function () {
+        gedcom: wn('gedcom', function () {
           return n.e(42).then(n.t.bind(null, 'qseY', 7));
         }),
-        gherkin: $n('gherkin', function () {
+        gherkin: wn('gherkin', function () {
           return n.e(43).then(n.t.bind(null, 'kCZm', 7));
         }),
-        git: $n('git', function () {
+        git: wn('git', function () {
           return n.e(44).then(n.t.bind(null, 'YiBN', 7));
         }),
-        glsl: $n('glsl', function () {
+        glsl: wn('glsl', function () {
           return n.e(45).then(n.t.bind(null, 'v/up', 7));
         }),
-        go: $n('go', function () {
+        go: wn('go', function () {
           return n.e(46).then(n.t.bind(null, 'cbKp', 7));
         }),
-        graphql: $n('graphql', function () {
+        graphql: wn('graphql', function () {
           return n.e(47).then(n.t.bind(null, 'phHE', 7));
         }),
-        groovy: $n('groovy', function () {
+        groovy: wn('groovy', function () {
           return n.e(48).then(n.t.bind(null, 'keYo', 7));
         }),
-        haml: $n('haml', function () {
+        haml: wn('haml', function () {
           return n.e(49).then(n.t.bind(null, 'wlav', 7));
         }),
-        handlebars: $n('handlebars', function () {
+        handlebars: wn('handlebars', function () {
           return n.e(50).then(n.t.bind(null, 'jgXz', 7));
         }),
-        haskell: $n('haskell', function () {
+        haskell: wn('haskell', function () {
           return n.e(51).then(n.t.bind(null, 'Crv7', 7));
         }),
-        haxe: $n('haxe', function () {
+        haxe: wn('haxe', function () {
           return n.e(52).then(n.t.bind(null, 'FDVF', 7));
         }),
-        hpkp: $n('hpkp', function () {
+        hpkp: wn('hpkp', function () {
           return n.e(53).then(n.t.bind(null, 'dj8l', 7));
         }),
-        hsts: $n('hsts', function () {
+        hsts: wn('hsts', function () {
           return n.e(54).then(n.t.bind(null, '3DeZ', 7));
         }),
-        http: $n('http', function () {
+        http: wn('http', function () {
           return n.e(55).then(n.t.bind(null, 'qu84', 7));
         }),
-        ichigojam: $n('ichigojam', function () {
+        ichigojam: wn('ichigojam', function () {
           return n.e(56).then(n.t.bind(null, 'Skso', 7));
         }),
-        icon: $n('icon', function () {
+        icon: wn('icon', function () {
           return n.e(57).then(n.t.bind(null, 'tYeQ', 7));
         }),
-        inform7: $n('inform7', function () {
+        inform7: wn('inform7', function () {
           return n.e(58).then(n.t.bind(null, 'hGJt', 7));
         }),
-        ini: $n('ini', function () {
+        ini: wn('ini', function () {
           return n.e(59).then(n.t.bind(null, '22HQ', 7));
         }),
-        io: $n('io', function () {
+        io: wn('io', function () {
           return n.e(60).then(n.t.bind(null, 'XDzI', 7));
         }),
-        j: $n('j', function () {
+        j: wn('j', function () {
           return n.e(61).then(n.t.bind(null, 'fNCr', 7));
         }),
-        java: $n('java', function () {
+        java: wn('java', function () {
           return n.e(62).then(n.t.bind(null, 'DPa0', 7));
         }),
-        javascript: $n('javascript', function () {
+        javascript: wn('javascript', function () {
           return n.e(63).then(n.t.bind(null, 'H4ZV', 7));
         }),
-        jolie: $n('jolie', function () {
+        jolie: wn('jolie', function () {
           return n.e(64).then(n.t.bind(null, '8YJO', 7));
         }),
-        json: $n('json', function () {
+        json: wn('json', function () {
           return n.e(65).then(n.t.bind(null, 'Qg97', 7));
         }),
-        jsx: $n('jsx', function () {
+        jsx: wn('jsx', function () {
           return n.e(66).then(n.t.bind(null, '1K8B', 7));
         }),
-        julia: $n('julia', function () {
+        julia: wn('julia', function () {
           return n.e(67).then(n.t.bind(null, 'tnne', 7));
         }),
-        keyman: $n('keyman', function () {
+        keyman: wn('keyman', function () {
           return n.e(68).then(n.t.bind(null, 'Gdkm', 7));
         }),
-        kotlin: $n('kotlin', function () {
+        kotlin: wn('kotlin', function () {
           return n.e(69).then(n.t.bind(null, 'fnZc', 7));
         }),
-        latex: $n('latex', function () {
+        latex: wn('latex', function () {
           return n.e(70).then(n.t.bind(null, 'hvS6', 7));
         }),
-        less: $n('less', function () {
+        less: wn('less', function () {
           return n.e(71).then(n.t.bind(null, 'hR/J', 7));
         }),
-        liquid: $n('liquid', function () {
+        liquid: wn('liquid', function () {
           return n.e(72).then(n.t.bind(null, '9B5k', 7));
         }),
-        lisp: $n('lisp', function () {
+        lisp: wn('lisp', function () {
           return n.e(73).then(n.t.bind(null, 'v/u2', 7));
         }),
-        livescript: $n('livescript', function () {
+        livescript: wn('livescript', function () {
           return n.e(74).then(n.t.bind(null, 'B62i', 7));
         }),
-        lolcode: $n('lolcode', function () {
+        lolcode: wn('lolcode', function () {
           return n.e(75).then(n.t.bind(null, '9Fha', 7));
         }),
-        lua: $n('lua', function () {
+        lua: wn('lua', function () {
           return n.e(76).then(n.t.bind(null, 'VOTz', 7));
         }),
-        makefile: $n('makefile', function () {
+        makefile: wn('makefile', function () {
           return n.e(77).then(n.t.bind(null, 'p+MO', 7));
         }),
-        markdown: $n('markdown', function () {
+        markdown: wn('markdown', function () {
           return n.e(78).then(n.t.bind(null, 'OniS', 7));
         }),
-        markupTemplating: $n('markupTemplating', function () {
+        markupTemplating: wn('markupTemplating', function () {
           return n.e(80).then(n.t.bind(null, '0iGP', 7));
         }),
-        markup: $n('markup', function () {
+        markup: wn('markup', function () {
           return n.e(79).then(n.t.bind(null, 'Ox1z', 7));
         }),
-        matlab: $n('matlab', function () {
+        matlab: wn('matlab', function () {
           return n.e(81).then(n.t.bind(null, 'vY5V', 7));
         }),
-        mel: $n('mel', function () {
+        mel: wn('mel', function () {
           return n.e(82).then(n.t.bind(null, 'zDxY', 7));
         }),
-        mizar: $n('mizar', function () {
+        mizar: wn('mizar', function () {
           return n.e(83).then(n.t.bind(null, 'lKmu', 7));
         }),
-        monkey: $n('monkey', function () {
+        monkey: wn('monkey', function () {
           return n.e(84).then(n.t.bind(null, 'SlDd', 7));
         }),
-        n4js: $n('n4js', function () {
+        n4js: wn('n4js', function () {
           return n.e(85).then(n.t.bind(null, '4zmH', 7));
         }),
-        nasm: $n('nasm', function () {
+        nasm: wn('nasm', function () {
           return n.e(86).then(n.t.bind(null, 'AoEZ', 7));
         }),
-        nginx: $n('nginx', function () {
+        nginx: wn('nginx', function () {
           return n.e(87).then(n.t.bind(null, 'aUvw', 7));
         }),
-        nim: $n('nim', function () {
+        nim: wn('nim', function () {
           return n.e(88).then(n.t.bind(null, 'tBDx', 7));
         }),
-        nix: $n('nix', function () {
+        nix: wn('nix', function () {
           return n.e(89).then(n.t.bind(null, 'K5tb', 7));
         }),
-        nsis: $n('nsis', function () {
+        nsis: wn('nsis', function () {
           return n.e(90).then(n.t.bind(null, 'iY0B', 7));
         }),
-        objectivec: $n('objectivec', function () {
+        objectivec: wn('objectivec', function () {
           return n.e(91).then(n.t.bind(null, 'sFmL', 7));
         }),
-        ocaml: $n('ocaml', function () {
+        ocaml: wn('ocaml', function () {
           return n.e(92).then(n.t.bind(null, 'v6/A', 7));
         }),
-        opencl: $n('opencl', function () {
+        opencl: wn('opencl', function () {
           return n.e(93).then(n.t.bind(null, 'ul/r', 7));
         }),
-        oz: $n('oz', function () {
+        oz: wn('oz', function () {
           return n.e(94).then(n.t.bind(null, 'zwFG', 7));
         }),
-        parigp: $n('parigp', function () {
+        parigp: wn('parigp', function () {
           return n.e(95).then(n.t.bind(null, 'mNGm', 7));
         }),
-        parser: $n('parser', function () {
+        parser: wn('parser', function () {
           return n.e(96).then(n.t.bind(null, 'fu6h', 7));
         }),
-        pascal: $n('pascal', function () {
+        pascal: wn('pascal', function () {
           return n.e(97).then(n.t.bind(null, 'bSdp', 7));
         }),
-        perl: $n('perl', function () {
+        perl: wn('perl', function () {
           return n.e(98).then(n.t.bind(null, 'R4va', 7));
         }),
-        phpExtras: $n('phpExtras', function () {
+        phpExtras: wn('phpExtras', function () {
           return n.e(100).then(n.t.bind(null, 'D+Se', 7));
         }),
-        php: $n('php', function () {
+        php: wn('php', function () {
           return n.e(99).then(n.t.bind(null, '1MdW', 7));
         }),
-        plsql: $n('plsql', function () {
+        plsql: wn('plsql', function () {
           return n.e(101).then(n.t.bind(null, 'dnS0', 7));
         }),
-        powershell: $n('powershell', function () {
+        powershell: wn('powershell', function () {
           return n.e(102).then(n.t.bind(null, '3vSn', 7));
         }),
-        processing: $n('processing', function () {
+        processing: wn('processing', function () {
           return n.e(103).then(n.t.bind(null, 'RcLD', 7));
         }),
-        prolog: $n('prolog', function () {
+        prolog: wn('prolog', function () {
           return n.e(104).then(n.t.bind(null, 'ebaj', 7));
         }),
-        properties: $n('properties', function () {
+        properties: wn('properties', function () {
           return n.e(105).then(n.t.bind(null, 'JfXJ', 7));
         }),
-        protobuf: $n('protobuf', function () {
+        protobuf: wn('protobuf', function () {
           return n.e(106).then(n.t.bind(null, 'Azb4', 7));
         }),
-        pug: $n('pug', function () {
+        pug: wn('pug', function () {
           return n.e(107).then(n.t.bind(null, 'npx2', 7));
         }),
-        puppet: $n('puppet', function () {
+        puppet: wn('puppet', function () {
           return n.e(108).then(n.t.bind(null, 'G73E', 7));
         }),
-        pure: $n('pure', function () {
+        pure: wn('pure', function () {
           return n.e(109).then(n.t.bind(null, 'BWuY', 7));
         }),
-        python: $n('python', function () {
+        python: wn('python', function () {
           return n.e(110).then(n.t.bind(null, 'piw0', 7));
         }),
-        q: $n('q', function () {
+        q: wn('q', function () {
           return n.e(111).then(n.t.bind(null, 'LbkK', 7));
         }),
-        qore: $n('qore', function () {
+        qore: wn('qore', function () {
           return n.e(112).then(n.t.bind(null, 'F2b0', 7));
         }),
-        r: $n('r', function () {
+        r: wn('r', function () {
           return n.e(113).then(n.t.bind(null, 'tQ4h', 7));
         }),
-        reason: $n('reason', function () {
+        reason: wn('reason', function () {
           return n.e(114).then(n.t.bind(null, 'vSYx', 7));
         }),
-        renpy: $n('renpy', function () {
+        renpy: wn('renpy', function () {
           return n.e(115).then(n.t.bind(null, '41kq', 7));
         }),
-        rest: $n('rest', function () {
+        rest: wn('rest', function () {
           return n.e(116).then(n.t.bind(null, '0HCD', 7));
         }),
-        rip: $n('rip', function () {
+        rip: wn('rip', function () {
           return n.e(117).then(n.t.bind(null, 'C3kK', 7));
         }),
-        roboconf: $n('roboconf', function () {
+        roboconf: wn('roboconf', function () {
           return n.e(118).then(n.t.bind(null, 'oTt7', 7));
         }),
-        ruby: $n('ruby', function () {
+        ruby: wn('ruby', function () {
           return n.e(119).then(n.t.bind(null, 'SVLc', 7));
         }),
-        rust: $n('rust', function () {
+        rust: wn('rust', function () {
           return n.e(120).then(n.t.bind(null, '0Wr9', 7));
         }),
-        sas: $n('sas', function () {
+        sas: wn('sas', function () {
           return n.e(121).then(n.t.bind(null, 'oV7L', 7));
         }),
-        sass: $n('sass', function () {
+        sass: wn('sass', function () {
           return n.e(122).then(n.t.bind(null, 'ER9t', 7));
         }),
-        scala: $n('scala', function () {
+        scala: wn('scala', function () {
           return n.e(123).then(n.t.bind(null, 'qcbc', 7));
         }),
-        scheme: $n('scheme', function () {
+        scheme: wn('scheme', function () {
           return n.e(124).then(n.t.bind(null, 'zFKg', 7));
         }),
-        scss: $n('scss', function () {
+        scss: wn('scss', function () {
           return n.e(125).then(n.t.bind(null, 'vCn/', 7));
         }),
-        smalltalk: $n('smalltalk', function () {
+        smalltalk: wn('smalltalk', function () {
           return n.e(126).then(n.t.bind(null, 'dLlz', 7));
         }),
-        smarty: $n('smarty', function () {
+        smarty: wn('smarty', function () {
           return n.e(127).then(n.t.bind(null, 'sYQe', 7));
         }),
-        soy: $n('soy', function () {
+        soy: wn('soy', function () {
           return n.e(128).then(n.t.bind(null, '4UXz', 7));
         }),
-        sql: $n('sql', function () {
+        sql: wn('sql', function () {
           return n.e(129).then(n.t.bind(null, 'uFsh', 7));
         }),
-        stylus: $n('stylus', function () {
+        stylus: wn('stylus', function () {
           return n.e(130).then(n.t.bind(null, 'ZZii', 7));
         }),
-        swift: $n('swift', function () {
+        swift: wn('swift', function () {
           return n.e(131).then(n.t.bind(null, 'VvBV', 7));
         }),
-        tap: $n('tap', function () {
+        tap: wn('tap', function () {
           return n.e(132).then(n.t.bind(null, 'LMH6', 7));
         }),
-        tcl: $n('tcl', function () {
+        tcl: wn('tcl', function () {
           return n.e(133).then(n.t.bind(null, 'UO0u', 7));
         }),
-        textile: $n('textile', function () {
+        textile: wn('textile', function () {
           return n.e(134).then(n.t.bind(null, 'F+rS', 7));
         }),
-        tsx: $n('tsx', function () {
+        tsx: wn('tsx', function () {
           return n.e(135).then(n.t.bind(null, 'T09G', 7));
         }),
-        tt2: $n('tt2', function () {
+        tt2: wn('tt2', function () {
           return n.e(136).then(n.t.bind(null, 'xdbo', 7));
         }),
-        twig: $n('twig', function () {
+        twig: wn('twig', function () {
           return n.e(137).then(n.t.bind(null, 'dQnZ', 7));
         }),
-        typescript: $n('typescript', function () {
+        typescript: wn('typescript', function () {
           return n.e(138).then(n.t.bind(null, 'WUdu', 7));
         }),
-        vbnet: $n('vbnet', function () {
+        vbnet: wn('vbnet', function () {
           return n.e(139).then(n.t.bind(null, '5/I5', 7));
         }),
-        velocity: $n('velocity', function () {
+        velocity: wn('velocity', function () {
           return n.e(140).then(n.t.bind(null, 'xwQe', 7));
         }),
-        verilog: $n('verilog', function () {
+        verilog: wn('verilog', function () {
           return n.e(141).then(n.t.bind(null, 'MU+u', 7));
         }),
-        vhdl: $n('vhdl', function () {
+        vhdl: wn('vhdl', function () {
           return n.e(142).then(n.t.bind(null, '+E/D', 7));
         }),
-        vim: $n('vim', function () {
+        vim: wn('vim', function () {
           return n.e(143).then(n.t.bind(null, 'm+qi', 7));
         }),
-        visualBasic: $n('visualBasic', function () {
+        visualBasic: wn('visualBasic', function () {
           return n.e(144).then(n.t.bind(null, 'SNVr', 7));
         }),
-        wasm: $n('wasm', function () {
+        wasm: wn('wasm', function () {
           return n.e(145).then(n.t.bind(null, 'aKgD', 7));
         }),
-        wiki: $n('wiki', function () {
+        wiki: wn('wiki', function () {
           return n.e(146).then(n.t.bind(null, 'rxUy', 7));
         }),
-        xeora: $n('xeora', function () {
+        xeora: wn('xeora', function () {
           return n.e(147).then(n.t.bind(null, 'jCh7', 7));
         }),
-        xojo: $n('xojo', function () {
+        xojo: wn('xojo', function () {
           return n.e(148).then(n.t.bind(null, '057u', 7));
         }),
-        xquery: $n('xquery', function () {
+        xquery: wn('xquery', function () {
           return n.e(149).then(n.t.bind(null, 'Hwnw', 7));
         }),
-        yaml: $n('yaml', function () {
+        yaml: wn('yaml', function () {
           return n.e(150).then(n.t.bind(null, 'uBZG', 7));
         }),
       },
-      Kn = Gn({
+      On = bn({
         loader: function () {
           return n
             .e(152)
@@ -33998,14 +33824,14 @@
         isLanguageRegistered: function (e, t) {
           return e.registered(t);
         },
-        languageLoaders: Yn,
+        languageLoaders: xn,
         registerLanguage: function (e, t, n) {
           return e.register(n);
         },
       });
-    function Qn() {
+    function En() {
       return (
-        (Qn =
+        (En =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -34015,15 +33841,15 @@
             }
             return e;
           }),
-        Qn.apply(this, arguments)
+        En.apply(this, arguments)
       );
     }
-    function Zn(e, t) {
+    function kn(e, t) {
       (e.prototype = Object.create(t.prototype)),
         (e.prototype.constructor = e),
         (e.__proto__ = t);
     }
-    function Jn(e, t) {
+    function Sn(e, t) {
       if (null == e) return {};
       var n,
         r,
@@ -34033,65 +33859,65 @@
         (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
       return o;
     }
-    function Xn(e, t) {
+    function jn(e, t) {
       return t || (t = e.slice(0)), (e.raw = t), e;
     }
-    var er = 'light';
-    function tr(e) {
-      return Qn({ mode: er }, null === e || void 0 === e ? void 0 : e.theme);
+    var Cn = 'light';
+    function _n(e) {
+      return En({ mode: Cn }, null === e || void 0 === e ? void 0 : e.theme);
     }
-    function nr(e) {
+    function Pn(e) {
       var t = e;
       return function (e) {
-        var n = tr(e);
+        var n = _n(e);
         return t[n.mode];
       };
     }
-    var rr = function (e) {
+    var An = function (e) {
         var t = { theme: e };
         return {
-          lineNumberColor: nr({ light: '#383a42', dark: '#abb2bf' })(t),
-          lineNumberBgColor: nr({ light: '#fafafa', dark: '#282c34' })(t),
-          backgroundColor: nr({ light: '#fafafa', dark: '#282c34' })(t),
-          textColor: nr({ light: '#383a42', dark: '#abb2bf' })(t),
-          substringColor: nr({ light: '#e45649', dark: '#e06c75' })(t),
-          keywordColor: nr({ light: '#a626a4', dark: '#c678dd' })(t),
-          attributeColor: nr({ light: '#50a14f', dark: '#98c379' })(t),
-          selectorAttributeColor: nr({ light: '#e45649', dark: '#e06c75' })(t),
-          docTagColor: nr({ light: '#a626a4', dark: '#c678dd' })(t),
-          nameColor: nr({ light: '#e45649', dark: '#e06c75' })(t),
-          builtInColor: nr({ light: '#c18401', dark: '#e6c07b' })(t),
-          literalColor: nr({ light: '#0184bb', dark: '#56b6c2' })(t),
-          bulletColor: nr({ light: '#4078f2', dark: '#61aeee' })(t),
-          codeColor: nr({ light: '#383a42', dark: '#abb2bf' })(t),
-          additionColor: nr({ light: '#50a14f', dark: '#98c379' })(t),
-          regexpColor: nr({ light: '#50a14f', dark: '#98c379' })(t),
-          symbolColor: nr({ light: '#4078f2', dark: '#61aeee' })(t),
-          variableColor: nr({ light: '#986801', dark: '#d19a66' })(t),
-          templateVariableColor: nr({ light: '#986801', dark: '#d19a66' })(t),
-          linkColor: nr({ light: '#4078f2', dark: '#61aeee' })(t),
-          selectorClassColor: nr({ light: '#986801', dark: '#d19a66' })(t),
-          typeColor: nr({ light: '#986801', dark: '#d19a66' })(t),
-          stringColor: nr({ light: '#50a14f', dark: '#98c379' })(t),
-          selectorIdColor: nr({ light: '#4078f2', dark: '#61aeee' })(t),
-          quoteColor: nr({ light: '#a0a1a7', dark: '#5c6370' })(t),
-          templateTagColor: nr({ light: '#383a42', dark: '#abb2bf' })(t),
-          deletionColor: nr({ light: '#e45649', dark: '#e06c75' })(t),
-          titleColor: nr({ light: '#4078f2', dark: '#61aeee' })(t),
-          sectionColor: nr({ light: '#e45649', dark: '#e06c75' })(t),
-          commentColor: nr({ light: '#a0a1a7', dark: '#5c6370' })(t),
-          metaKeywordColor: nr({ light: '#383a42', dark: '#abb2bf' })(t),
-          metaColor: nr({ light: '#4078f2', dark: '#61aeee' })(t),
-          functionColor: nr({ light: '#383a42', dark: '#abb2bf' })(t),
-          numberColor: nr({ light: '#986801', dark: '#d19a66' })(t),
+          lineNumberColor: Pn({ light: '#383a42', dark: '#abb2bf' })(t),
+          lineNumberBgColor: Pn({ light: '#fafafa', dark: '#282c34' })(t),
+          backgroundColor: Pn({ light: '#fafafa', dark: '#282c34' })(t),
+          textColor: Pn({ light: '#383a42', dark: '#abb2bf' })(t),
+          substringColor: Pn({ light: '#e45649', dark: '#e06c75' })(t),
+          keywordColor: Pn({ light: '#a626a4', dark: '#c678dd' })(t),
+          attributeColor: Pn({ light: '#50a14f', dark: '#98c379' })(t),
+          selectorAttributeColor: Pn({ light: '#e45649', dark: '#e06c75' })(t),
+          docTagColor: Pn({ light: '#a626a4', dark: '#c678dd' })(t),
+          nameColor: Pn({ light: '#e45649', dark: '#e06c75' })(t),
+          builtInColor: Pn({ light: '#c18401', dark: '#e6c07b' })(t),
+          literalColor: Pn({ light: '#0184bb', dark: '#56b6c2' })(t),
+          bulletColor: Pn({ light: '#4078f2', dark: '#61aeee' })(t),
+          codeColor: Pn({ light: '#383a42', dark: '#abb2bf' })(t),
+          additionColor: Pn({ light: '#50a14f', dark: '#98c379' })(t),
+          regexpColor: Pn({ light: '#50a14f', dark: '#98c379' })(t),
+          symbolColor: Pn({ light: '#4078f2', dark: '#61aeee' })(t),
+          variableColor: Pn({ light: '#986801', dark: '#d19a66' })(t),
+          templateVariableColor: Pn({ light: '#986801', dark: '#d19a66' })(t),
+          linkColor: Pn({ light: '#4078f2', dark: '#61aeee' })(t),
+          selectorClassColor: Pn({ light: '#986801', dark: '#d19a66' })(t),
+          typeColor: Pn({ light: '#986801', dark: '#d19a66' })(t),
+          stringColor: Pn({ light: '#50a14f', dark: '#98c379' })(t),
+          selectorIdColor: Pn({ light: '#4078f2', dark: '#61aeee' })(t),
+          quoteColor: Pn({ light: '#a0a1a7', dark: '#5c6370' })(t),
+          templateTagColor: Pn({ light: '#383a42', dark: '#abb2bf' })(t),
+          deletionColor: Pn({ light: '#e45649', dark: '#e06c75' })(t),
+          titleColor: Pn({ light: '#4078f2', dark: '#61aeee' })(t),
+          sectionColor: Pn({ light: '#e45649', dark: '#e06c75' })(t),
+          commentColor: Pn({ light: '#a0a1a7', dark: '#5c6370' })(t),
+          metaKeywordColor: Pn({ light: '#383a42', dark: '#abb2bf' })(t),
+          metaColor: Pn({ light: '#4078f2', dark: '#61aeee' })(t),
+          functionColor: Pn({ light: '#383a42', dark: '#abb2bf' })(t),
+          numberColor: Pn({ light: '#986801', dark: '#d19a66' })(t),
         };
       },
-      or = 'inherit',
-      ar = 'inherit',
-      ir = { fontSize: ar, fontFamily: or, lineHeight: 20 / 12, padding: 8 },
-      ur = function (e) {
+      Tn = 'inherit',
+      Rn = 'inherit',
+      Nn = { fontSize: Rn, fontFamily: Tn, lineHeight: 20 / 12, padding: 8 },
+      In = function (e) {
         return {
-          fontSize: ar,
+          fontSize: Rn,
           lineHeight: 20 / 14,
           color: e.lineNumberColor,
           backgroundColor: e.lineNumberBgColor,
@@ -34101,7 +33927,7 @@
           userSelect: 'none',
         };
       },
-      cr = function (e) {
+      Mn = function (e) {
         return {
           key: { color: e.keywordColor, fontWeight: 'bolder' },
           keyword: { color: e.keywordColor, fontWeight: 'bolder' },
@@ -34109,12 +33935,12 @@
           selector: { color: e.selectorTagColor },
           comment: {
             color: e.commentColor,
-            fontFamily: or,
+            fontFamily: Tn,
             fontStyle: 'italic',
           },
           'block-comment': {
             color: e.commentColor,
-            fontFamily: or,
+            fontFamily: Tn,
             fontStyle: 'italic',
           },
           'function-name': { color: e.sectionColor },
@@ -34148,10 +33974,10 @@
           number: { color: e.numberColor },
         };
       },
-      lr = function (e) {
+      Ln = function (e) {
         return {
-          fontSize: ar,
-          fontFamily: or,
+          fontSize: Rn,
+          fontFamily: Tn,
           background: e.backgroundColor,
           color: e.textColor,
           borderRadius: 3,
@@ -34161,32 +33987,32 @@
           whiteSpace: 'pre',
         };
       },
-      sr = function (e) {
-        return Qn({ 'pre[class*="language-"]': lr(e) }, cr(e));
+      Fn = function (e) {
+        return En({ 'pre[class*="language-"]': Ln(e) }, Mn(e));
       },
-      fr = function (e) {
-        return Qn(
+      Dn = function (e) {
+        return En(
           {
-            'pre[class*="language-"]': Qn({}, lr(e), {
+            'pre[class*="language-"]': En({}, Ln(e), {
               padding: '2px 4px',
               display: 'inline',
               whiteSpace: 'pre-wrap',
             }),
           },
-          cr(e),
+          Mn(e),
         );
       };
-    function dr(e) {
+    function Un(e) {
       void 0 === e && (e = { mode: 'light' });
-      var t = Qn({}, rr(e), e);
+      var t = En({}, An(e), e);
       return {
-        lineNumberContainerStyle: ur(t),
-        codeBlockStyle: sr(t),
-        inlineCodeStyle: fr(t),
-        codeContainerStyle: ir,
+        lineNumberContainerStyle: In(t),
+        codeBlockStyle: Fn(t),
+        inlineCodeStyle: Dn(t),
+        codeContainerStyle: Nn,
       };
     }
-    var pr = Object.freeze([
+    var Bn = Object.freeze([
         { name: 'PHP', alias: ['php', 'php3', 'php4', 'php5'], value: 'php' },
         { name: 'Java', alias: ['java'], value: 'java' },
         { name: 'CSharp', alias: ['csharp', 'c#'], value: 'cs' },
@@ -34336,19 +34162,19 @@
         { name: 'Yaml', alias: ['yaml', 'yml'], value: 'yaml' },
         { name: 'GraphQL', alias: ['graphql', 'gql'], value: 'graphql' },
       ]),
-      hr = function (e) {
+      zn = function (e) {
         if (!e) return '';
-        var t = pr.find(function (t) {
+        var t = Bn.find(function (t) {
           return t.name === e || t.alias.includes(e);
         });
         return t ? t.value : e || 'text';
       },
-      vr = (function (e) {
+      Vn = (function (e) {
         function t() {
           var t;
           return (t = e.apply(this, arguments) || this), (t._isMounted = !1), t;
         }
-        Zn(t, e);
+        kn(t, e);
         var n = t.prototype;
         return (
           (n.componentDidMount = function () {
@@ -34382,9 +34208,9 @@
           }),
           (n.render = function () {
             var e = this,
-              t = dr(this.props.theme),
+              t = Un(this.props.theme),
               n = t.inlineCodeStyle,
-              r = hr(this.props.language),
+              r = zn(this.props.language),
               o = {
                 language: r,
                 PreTag: this.props.preTag,
@@ -34394,13 +34220,13 @@
                 codeTagProps: this.props.codeTagProps,
               };
             return c.a.createElement(
-              Kn,
+              On,
               Object.assign({}, o, {
                 wrapLines: this.props.highlight.length > 0,
                 customStyle: this.props.customStyle,
                 lineProps: function (t) {
                   return {
-                    style: Qn(
+                    style: En(
                       { opacity: e.getLineOpacity(t) },
                       e.props.lineNumberContainerStyle,
                     ),
@@ -34413,7 +34239,7 @@
           t
         );
       })(u['PureComponent']);
-    vr.defaultProps = {
+    Vn.defaultProps = {
       theme: {},
       showLineNumbers: !1,
       startingLineNumber: 1,
@@ -34423,8 +34249,8 @@
       highlight: '',
       customStyle: {},
     };
-    var gr = 'text',
-      yr = (function (e) {
+    var qn = 'text',
+      Wn = (function (e) {
         function t() {
           var t;
           return (
@@ -34449,7 +34275,7 @@
             t
           );
         }
-        Zn(t, e);
+        kn(t, e);
         var n = t.prototype;
         return (
           (n.componentDidMount = function () {
@@ -34463,13 +34289,13 @@
               t,
               n,
               r,
-              o = dr(this.props.theme),
+              o = Un(this.props.theme),
               a = o.lineNumberContainerStyle,
               i = o.codeBlockStyle,
               u = o.codeContainerStyle,
               l = {
-                language: this.props.language || gr,
-                codeStyle: Qn(
+                language: this.props.language || qn,
+                codeStyle: En(
                   {},
                   i,
                   null === (e = this.props) || void 0 === e
@@ -34483,7 +34309,7 @@
                 showLineNumbers: this.props.showLineNumbers,
                 startingLineNumber: this.props.startingLineNumber,
                 codeTagProps: {
-                  style: Qn(
+                  style: En(
                     {},
                     u,
                     null === (n = this.props) || void 0 === n
@@ -34491,7 +34317,7 @@
                       : n.codeContainerStyle,
                   ),
                 },
-                lineNumberContainerStyle: Qn(
+                lineNumberContainerStyle: En(
                   {},
                   a,
                   null === (r = this.props) || void 0 === r
@@ -34501,26 +34327,26 @@
                 text: this.props.text.toString(),
                 highlight: this.props.highlight,
               };
-            return c.a.createElement(vr, Object.assign({}, l));
+            return c.a.createElement(Vn, Object.assign({}, l));
           }),
           t
         );
       })(u['PureComponent']);
-    (yr.displayName = 'CodeBlock'),
-      (yr.defaultProps = {
+    (Wn.displayName = 'CodeBlock'),
+      (Wn.defaultProps = {
         showLineNumbers: !0,
         startingLineNumber: 1,
-        language: gr,
+        language: qn,
         theme: {},
         highlight: '',
         lineNumberContainerStyle: {},
         customStyle: {},
         codeBlockStyle: {},
       });
-    var mr = function (e) {
+    var Hn = function (e) {
       var t = e.size,
         n = e.color,
-        r = Jn(e, ['size', 'color']);
+        r = Sn(e, ['size', 'color']);
       return c.a.createElement(
         'svg',
         Object.assign({}, r, {
@@ -34534,12 +34360,12 @@
         }),
       );
     };
-    (mr.displayName = 'ClipboardListIcon'),
-      (mr.defaultProps = { size: '16pt', color: 'currentcolor' });
-    var br = function (e) {
+    (Hn.displayName = 'ClipboardListIcon'),
+      (Hn.defaultProps = { size: '16pt', color: 'currentcolor' });
+    var Gn = function (e) {
       var t = e.size,
         n = e.color,
-        r = Jn(e, ['size', 'color']);
+        r = Sn(e, ['size', 'color']);
       return c.a.createElement(
         'svg',
         Object.assign({}, r, {
@@ -34553,74 +34379,74 @@
         }),
       );
     };
-    function wr(e) {
+    function $n(e) {
       var t = e.size,
         n = e.color,
         r = e.copied,
-        o = Jn(e, ['size', 'color', 'copied']);
+        o = Sn(e, ['size', 'color', 'copied']);
       return r
-        ? c.a.createElement(br, Object.assign({}, { color: n, size: t }, o))
-        : c.a.createElement(mr, Object.assign({}, { color: n, size: t }, o));
+        ? c.a.createElement(Gn, Object.assign({}, { color: n, size: t }, o))
+        : c.a.createElement(Hn, Object.assign({}, { color: n, size: t }, o));
     }
-    (br.displayName = 'ClipboardCheckIcon'),
-      (br.defaultProps = { size: '16pt', color: 'currentcolor' });
-    var xr = function () {
+    (Gn.displayName = 'ClipboardCheckIcon'),
+      (Gn.defaultProps = { size: '16pt', color: 'currentcolor' });
+    var Yn = function () {
         return Boolean(
           'undefined' !== typeof window &&
             window.document &&
             window.document.createElement,
         );
       },
-      Or = function () {
+      Kn = function () {
         var e = Object(u['useState'])(!1),
           t = e[0],
           n = e[1];
         return (
           Object(u['useEffect'])(function () {
-            n(xr());
+            n(Yn());
           }, []),
           { isBrowser: t, isServer: !t }
         );
       },
-      Er = function () {
+      Qn = function () {
         return Math.random().toString(32).slice(2, 10);
       },
-      kr = function (e) {
+      Zn = function (e) {
         var t = document.createElement('div');
         return t.setAttribute('id', e), t;
       },
-      Sr = function (e) {
-        void 0 === e && (e = Er());
+      Jn = function (e) {
+        void 0 === e && (e = Qn());
         var t = 'zeit-ui-' + e,
-          n = Or(),
+          n = Kn(),
           r = n.isBrowser,
-          o = Object(u['useState'])(r ? kr(t) : null),
+          o = Object(u['useState'])(r ? Zn(t) : null),
           a = o[0],
           i = o[1];
         return (
           Object(u['useEffect'])(function () {
             var e = document.querySelector('#' + t),
-              n = e || kr(t);
+              n = e || Zn(t);
             e || document.body.appendChild(n), i(n);
           }, []),
           a
         );
       },
-      jr = {},
-      Cr = function (e, t) {
+      Xn = {},
+      er = function (e, t) {
         var n = t ? ' [' + t + ']' : ' ',
           r = '[Zeit UI]' + n + ': ' + e;
         'undefined' !== typeof console &&
-          (jr[r] || ((jr[r] = !0), console.warn(r)));
+          (Xn[r] || ((Xn[r] = !0), console.warn(r)));
       },
-      _r = {
+      tr = {
         onError: function () {
-          return Cr('Failed to copy.', 'use-clipboard');
+          return er('Failed to copy.', 'use-clipboard');
         },
       },
-      Pr = function (e) {
-        void 0 === e && (e = _r);
-        var t = Sr('clipboard'),
+      nr = function (e) {
+        void 0 === e && (e = tr);
+        var t = Jn('clipboard'),
           n = function (t, n) {
             if (t && n) {
               var r = window.getSelection();
@@ -34645,34 +34471,34 @@
           );
         return { copy: r };
       };
-    function Ar() {
-      var e = Xn([
+    function rr() {
+      var e = jn([
         '\n  position: relative;\n  background: ',
         ';\n  border-radius: 0.25rem;\n  padding: ',
         ';\n',
       ]);
       return (
-        (Ar = function () {
+        (rr = function () {
           return e;
         }),
         e
       );
     }
-    function Tr() {
-      var e = Xn([
+    function or() {
+      var e = jn([
         '\n  position: absolute;\n  top: 0.5em;\n  right: 0.75em;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  align-items: center;\n  background: ',
         ';\n  margin-top: 0.15rem;\n  border-radius: 0.25rem;\n  max-height: 2rem;\n  max-width: 2rem;\n  padding: 0.25rem;\n  &:hover {\n    opacity: ',
         ';\n  }\n  &:focus {\n    outline: none;\n    opacity: 1;\n  }\n  .icon {\n    width: 1rem;\n    height: 1rem;\n  }\n',
       ]);
       return (
-        (Tr = function () {
+        (or = function () {
           return e;
         }),
         e
       );
     }
-    var Rr = ln['b'].button(
-        Tr(),
+    var ar = Mt['b'].button(
+        or(),
         function (e) {
           return e.theme.backgroundColor;
         },
@@ -34680,8 +34506,8 @@
           return e.copied ? 1 : 0.5;
         },
       ),
-      Nr = ln['b'].div(
-        Ar(),
+      ir = Mt['b'].div(
+        rr(),
         function (e) {
           return e.theme.backgroundColor;
         },
@@ -34689,7 +34515,7 @@
           return e.codeBlock ? '0.25rem 0.5rem 0.25rem 0.25rem' : '0.25rem';
         },
       );
-    function Ir(e) {
+    function ur(e) {
       var t = e.theme,
         n = e.text,
         r = e.codeBlock,
@@ -34697,28 +34523,28 @@
         a = e.customStyle,
         i = void 0 === a ? {} : a,
         l = e.onCopy,
-        s = Jn(e, ['theme', 'text', 'codeBlock', 'customStyle', 'onCopy']),
+        s = Sn(e, ['theme', 'text', 'codeBlock', 'customStyle', 'onCopy']),
         f = Object(u['useState'])(!1),
         d = f[0],
         p = f[1],
-        h = Pr(),
+        h = nr(),
         v = h.copy,
         g = function () {
           v(n), l ? l() : p(!d);
         };
       return c.a.createElement(
-        Nr,
+        ir,
         Object.assign({}, { codeBlock: o }, { style: i, theme: t }),
         o
-          ? c.a.createElement(yr, Object.assign({ text: n, theme: t }, s))
-          : c.a.createElement(vr, Object.assign({ text: n, theme: t }, s)),
+          ? c.a.createElement(Wn, Object.assign({ text: n, theme: t }, s))
+          : c.a.createElement(Vn, Object.assign({ text: n, theme: t }, s)),
         c.a.createElement(
-          Rr,
+          ar,
           Object.assign(
             { type: 'button', onClick: g },
             { theme: t, copied: d },
           ),
-          c.a.createElement(wr, {
+          c.a.createElement($n, {
             color: d ? t.stringColor : t.textColor,
             copied: d,
             className: 'icon',
@@ -34727,14 +34553,14 @@
         ),
       );
     }
-    var Mr = Object(ln['c'])(Ir);
-    function Lr(e) {
-      return c.a.createElement(Mr, Object.assign({}, e));
+    var cr = Object(Mt['c'])(ur);
+    function lr(e) {
+      return c.a.createElement(cr, Object.assign({}, e));
     }
     for (
-      var Fr = n('OUlt'),
-        Dr = n.n(Fr),
-        Ur = {
+      var sr = n('OUlt'),
+        fr = n.n(sr),
+        dr = {
           lineNumberColor: '#6272a4',
           lineNumberBgColor: '#282a36',
           backgroundColor: 'rgb(30, 30, 30)',
@@ -34772,7 +34598,7 @@
           functionColor: '#50FA7B',
           numberColor: '#bd93f9',
         },
-        Br = {
+        pr = {
           f1: {
             language: 'sol',
             code: 'pragma solidity 0.8.4;\n        pragma abicoder v2;\n        \n        import "../lzApp/NonblockingLzApp.sol";\n        \n        /// @title A LayerZero example sending a cross chain message from a source chain to a destination chain to increment a counter\n        contract OmniCounter is NonblockingLzApp {\n            uint public counter;\n        \n            constructor(address _lzEndpoint) NonblockingLzApp(_lzEndpoint) {}\n        \n            function _nonblockingLzReceive(uint16, bytes memory, uint64, bytes memory) internal override {\n                // _nonblockingLzReceive is how we provide custom logic to lzReceive()\n                // in this case, increment a counter when a message is received.\n                counter += 1;\n            }\n        \n            function incrementCounter(uint16 _dstChainId) public payable {\n                // _lzSend calls endpoint.send()\n                _lzSend(_dstChainId, bytes(""), payable(msg.sender), address(0x0), bytes(""));\n            }\n        }',
@@ -34782,14 +34608,14 @@
             code: '// an endpoint is the contract which has the send() function\n        ILayerZeroEndpoint public endpoint;\n        // call send() to send a message/payload to another chain\n        endpoint.send{value:msg.value}(\n            10001,               // destination LayerZero chainId\n            dstContractAddress,  // send to this address on the destination          \n            bytes("hello"),      // bytes payload\n            msg.sender,          // refund address\n            address(0x0),        // future parameter\n            bytes("")            // adapterParams (see "Advanced Features")\n         );',
           },
         },
-        zr = [],
-        Vr = 'Zero-Knowledge Omnichain Asset and Data Interoperation Network',
-        qr = 0;
-      qr < Vr.length;
-      qr++
+        hr = [],
+        vr = 'Zero-Knowledge Omnichain Asset and Data Interoperation Network',
+        gr = 0;
+      gr < vr.length;
+      gr++
     )
-      zr.push({ flag: !0, num: 2, text: Vr[qr] });
-    var Wr = () => {
+      hr.push({ flag: !0, num: 2, text: vr[gr] });
+    var yr = () => {
         var e = Object(u['useState'])(),
           t = Object(ke['a'])(e, 2),
           n = t[0],
@@ -34802,7 +34628,7 @@
           s = Object(ke['a'])(l, 2),
           f = s[0],
           d = s[1],
-          p = Object(u['useState'])(zr),
+          p = Object(u['useState'])(hr),
           h = Object(ke['a'])(p, 2),
           v = h[0],
           g = h[1];
@@ -34851,68 +34677,64 @@
               }),
               y());
           };
-        return Object(an['jsx'])('div', {
-          className: Dr.a.page,
-          children: Object(an['jsxs'])('div', {
+        return Object(Rt['jsx'])('div', {
+          className: fr.a.page,
+          children: Object(Rt['jsxs'])('div', {
             className: 'container',
             children: [
-              Object(an['jsx'])('header', {
+              Object(Rt['jsx'])('header', {
                 className: 'header',
-                children: Object(an['jsx'])('a', {
+                children: Object(Rt['jsx'])('a', {
                   className: 'header__logo',
-                  children: Object(an['jsx'])(Ne, { style: { width: '40px' } }),
+                  children: Object(Rt['jsx'])(Ne, { style: { width: '40px' } }),
                 }),
               }),
-              Object(an['jsx'])(cn, {}),
-              Object(an['jsx'])('div', {
+              Object(Rt['jsx'])(It, {}),
+              Object(Rt['jsx'])('div', {
                 className: 'swiper',
-                children: Object(an['jsxs'])('div', {
+                children: Object(Rt['jsxs'])('div', {
                   className: 'swiper-wrapper',
                   children: [
-                    Object(an['jsxs'])('div', {
+                    Object(Rt['jsxs'])('div', {
                       className: 'swiper-slide plan1',
                       children: [
-                        Object(an['jsxs'])('div', {
+                        Object(Rt['jsxs'])('div', {
                           className: 'left',
                           children: [
-                            Object(an['jsx'])('div', {
+                            Object(Rt['jsx'])('div', {
                               className: 'random',
-                              children: Object(an['jsx'])('h1', {
+                              children: Object(Rt['jsx'])('h1', {
                                 style: { wordBreak: 'break-all' },
                                 onMouseEnter: b,
                                 className: 'swiper-no-swiping',
-                                children: v.map((e) =>
-                                  Object(an['jsx'])('span', {
-                                    className: 'nbr ltr',
-                                    children: (2 == e.num && e.text) || e.num,
-                                  }),
-                                ),
+                                children:
+                                  'Zero-Knowledge Omnichain Asset and Data Interoperation Network',
                               }),
                             }),
-                            Object(an['jsx'])('p', {
+                            Object(Rt['jsx'])('p', {
                               className: 'swiper-no-swiping',
                               children:
                                 'Way Network achieves the multichain asset and data zero-knowledge interoperability based on zkRayler, ZK Verifier, IPFS, Sender, and Receiver.',
                             }),
-                            Object(an['jsx'])('div', {
-                              children: Object(an['jsx'])('a', {
+                            Object(Rt['jsx'])('div', {
+                              children: Object(Rt['jsx'])('a', {
                                 className: 'viewCode',
                                 children: 'Explore',
                               }),
                             }),
                           ],
                         }),
-                        Object(an['jsxs'])('div', {
+                        Object(Rt['jsxs'])('div', {
                           className: 'right',
                           children: [
-                            Object(an['jsx'])('div', {
-                              children: Object(an['jsx'])('iframe', {
+                            Object(Rt['jsx'])('div', {
+                              children: Object(Rt['jsx'])('iframe', {
                                 src: '/plan5/index.html',
                               }),
                             }),
-                            Object(an['jsx'])('div', {
+                            Object(Rt['jsx'])('div', {
                               style: { position: 'relative', zIndex: '1' },
-                              children: Object(an['jsx'])('iframe', {
+                              children: Object(Rt['jsx'])('iframe', {
                                 src: '/plan1/index.html',
                               }),
                             }),
@@ -34920,79 +34742,79 @@
                         }),
                       ],
                     }),
-                    Object(an['jsxs'])('div', {
+                    Object(Rt['jsxs'])('div', {
                       className: 'swiper-slide plan1',
                       children: [
-                        Object(an['jsxs'])('div', {
+                        Object(Rt['jsxs'])('div', {
                           className: 'left textsmall ',
                           children: [
-                            Object(an['jsx'])('h1', {
+                            Object(Rt['jsx'])('h1', {
                               className: 'swiper-no-swiping',
                               children:
                                 'The native zero-knowledge communication integrated with permissionless computing and storage',
                             }),
-                            Object(an['jsx'])('p', {
+                            Object(Rt['jsx'])('p', {
                               className: 'swiper-no-swiping',
                               children:
                                 'The Way Endpoint is encapsulated in Communication, Validation, and Network, which orchestrates the data by the permissionless computing and storage between any pair of nodes.',
                             }),
                           ],
                         }),
-                        Object(an['jsx'])('div', {
+                        Object(Rt['jsx'])('div', {
                           className: 'right',
-                          children: Object(an['jsx'])('iframe', {
+                          children: Object(Rt['jsx'])('iframe', {
                             src: '/plan2/index.html',
                           }),
                         }),
                       ],
                     }),
-                    Object(an['jsxs'])('div', {
+                    Object(Rt['jsxs'])('div', {
                       className: 'swiper-slide plan1',
                       children: [
-                        Object(an['jsxs'])('div', {
+                        Object(Rt['jsxs'])('div', {
                           className: 'left textsmall',
                           children: [
-                            Object(an['jsx'])('h1', {
+                            Object(Rt['jsx'])('h1', {
                               className: 'swiper-no-swiping',
                               children:
                                 'The universal solution to enable cross-chain transaction with trustless and valid delivery',
                             }),
-                            Object(an['jsx'])('p', {
+                            Object(Rt['jsx'])('p', {
                               className: 'swiper-no-swiping',
                               children:
                                 'The way communication protocol is the preferred method of cross-chain messaging system and can guarantee the trustless valid delivery without placing any trust in intermediary entities or tokens.',
                             }),
                           ],
                         }),
-                        Object(an['jsx'])('div', {
+                        Object(Rt['jsx'])('div', {
                           className: 'right',
-                          children: Object(an['jsx'])('iframe', {
+                          children: Object(Rt['jsx'])('iframe', {
                             src: '/plan4/index.html',
                           }),
                         }),
                       ],
                     }),
-                    Object(an['jsxs'])('div', {
+                    Object(Rt['jsxs'])('div', {
                       className: 'swiper-slide plan1',
                       children: [
-                        Object(an['jsxs'])('div', {
+                        Object(Rt['jsxs'])('div', {
                           className: 'left textsmall',
                           children: [
-                            Object(an['jsx'])('h1', {
+                            Object(Rt['jsx'])('h1', {
                               className: 'swiper-no-swiping',
                               children:
                                 'The decentralized network fabric underlying the fully connected omnichain ecosystem',
                             }),
-                            Object(an['jsx'])('p', {
+                            Object(Rt['jsx'])('p', {
                               className: 'swiper-no-swiping',
                               children:
                                 'Developers will be able to write seamless inter-chain applications like DEX or yield aggregator without worrying about differing semantics between inter- and intra-chain transactions.',
                             }),
                           ],
                         }),
-                        Object(an['jsx'])('div', {
+                        Object(Rt['jsx'])('div', {
                           className: 'right',
-                          children: Object(an['jsx'])('iframe', {
+                          children: Object(Rt['jsx'])('iframe', {
                             src: '/plan3/index.html',
                           }),
                         }),
@@ -35001,81 +34823,58 @@
                   ],
                 }),
               }),
-              Object(an['jsxs'])('footer', {
+              Object(Rt['jsxs'])('footer', {
                 className: 'footer',
                 children: [
-                  Object(an['jsx'])('ul', {
+                  Object(Rt['jsx'])('ul', {
                     className: 'pagination',
                     children: f.map((e, t) =>
-                      Object(an['jsx'])('li', {
+                      Object(Rt['jsx'])('li', {
                         className: 'pagination__item '.concat(
                           e && 'pagination__item--active',
                         ),
                         onClick: () => m(t),
-                        children: Object(an['jsx'])('a', {
+                        children: Object(Rt['jsx'])('a', {
                           className: 'pagination__button',
                         }),
                       }),
                     ),
                   }),
-                  Object(an['jsx'])('nav', {
+                  Object(Rt['jsx'])('nav', {
                     className: 'footer__menu',
-                    children: Object(an['jsxs'])('ul', {
+                    children: Object(Rt['jsxs'])('ul', {
                       className: 'social',
                       children: [
-                        Object(an['jsxs'])('li', {
+                        Object(Rt['jsxs'])('li', {
                           children: [
-                            Object(an['jsx'])('a', {
+                            Object(Rt['jsx'])('a', {
                               target: '_blank',
                               href: 'https://github.com/Way-Labs',
                               title: 'Github',
-                              children: Object(an['jsx'])(it, {}),
+                              children: Object(Rt['jsx'])(it, {}),
                             }),
-                            Object(an['jsx'])('a', {
+                            Object(Rt['jsx'])('a', {
                               target: '_blank',
                               href: 'https://twitter.com/WayNetwork_Labs',
                               title: 'Twitter',
-                              children: Object(an['jsx'])(dt, {}),
+                              children: Object(Rt['jsx'])(ft, {}),
                             }),
-                            ' ',
                           ],
                         }),
-                        Object(an['jsxs'])('li', {
-                          children: [
-                            Object(an['jsx'])('a', {
-                              target: '_blank',
-                              href: 'https://t.me/waynetwork_official',
-                              title: 'Telegram',
-                              children: Object(an['jsx'])(Ht, {}),
-                            }),
-                            ' ',
-                          ],
+                        Object(Rt['jsx'])('li', {
+                          children: Object(Rt['jsx'])('a', {
+                            target: '_blank',
+                            href: 'https://t.me/waynetwork_official',
+                            title: 'Telegram',
+                            children: Object(Rt['jsx'])(yt, {}),
+                          }),
                         }),
-                        Object(an['jsxs'])('li', {
-                          children: [
-                            Object(an['jsx'])('a', {
-                              href: '#',
-                              title: 'Discord',
-                              children: Object(an['jsx'])(mt, {}),
-                            }),
-                            ' ',
-                          ],
-                        }),
-                        Object(an['jsxs'])('li', {
-                          children: [
-                            Object(an['jsx'])('a', {
-                              href: '#',
-                              title: 'Medium',
-                              children: Object(an['jsx'])(kt, {}),
-                            }),
-                            ' ',
-                          ],
-                        }),
-                        Object(an['jsx'])('li', {
-                          children: Object(an['jsx'])('a', {
-                            href: '#',
-                            title: 'Youtube',
-                            children: Object(an['jsx'])(Qt, {}),
+                        Object(Rt['jsx'])('li', {
+                          children: Object(Rt['jsx'])('a', {
+                            target: '_blank',
+                            href: 'https://way-networks-organization.gitbook.io/way-network/',
+                            title: 'Gitbook',
+                            children: Object(Rt['jsx'])(kt, {}),
                           }),
                         }),
                       ],
@@ -35083,14 +34882,14 @@
                   }),
                 ],
               }),
-              Object(an['jsxs'])(Ee, {
-                title: Object(an['jsx'])('a', {
-                  children: Object(an['jsxs'])('div', {
+              Object(Rt['jsxs'])(Ee, {
+                title: Object(Rt['jsx'])('a', {
+                  children: Object(Rt['jsxs'])('div', {
                     style: { display: 'flex', justifyContent: 'center' },
                     children: [
-                      Object(an['jsx'])('span', { children: 'View On Github' }),
+                      Object(Rt['jsx'])('span', { children: 'View On Github' }),
                       '\xa0\xa0',
-                      Object(an['jsx'])(Ue, {}),
+                      Object(Rt['jsx'])(Ue, {}),
                     ],
                   }),
                 }),
@@ -35099,29 +34898,29 @@
                 visible: i,
                 onClose: () => c(!1),
                 children: [
-                  Object(an['jsx'])('h1', { children: 'Send Messages' }),
-                  Object(an['jsx'])('p', {
+                  Object(Rt['jsx'])('h1', { children: 'Send Messages' }),
+                  Object(Rt['jsx'])('p', {
                     children:
                       "To send a message, call the Endpoint's send() function. Initiate thesend() function in your contracts (similar to the CounterMock) to send a cross chain message.",
                   }),
-                  Object(an['jsx'])(Lr, {
+                  Object(Rt['jsx'])(lr, {
                     language: 'go',
                     wrapLines: !0,
-                    text: Br.f1.code,
+                    text: pr.f1.code,
                     codeBlock: !0,
-                    theme: Ur,
+                    theme: dr,
                     showLineNumbers: !0,
                   }),
-                  Object(an['jsx'])('p', {
+                  Object(Rt['jsx'])('p', {
                     children:
                       'Here is an explanation of the endpoint.send() interface:',
                   }),
-                  Object(an['jsx'])(Lr, {
+                  Object(Rt['jsx'])(lr, {
                     language: 'go',
                     wrapLines: !0,
-                    text: Br.f2.code,
+                    text: pr.f2.code,
                     codeBlock: !0,
-                    theme: Ur,
+                    theme: dr,
                     showLineNumbers: !0,
                   }),
                 ],
@@ -35130,9 +34929,9 @@
           }),
         });
       },
-      Hr = Wr;
-    function Gr() {
-      return Object(an['jsx'])('div', { children: Object(an['jsx'])(Hr, {}) });
+      mr = yr;
+    function br() {
+      return Object(Rt['jsx'])('div', { children: Object(Rt['jsx'])(mr, {}) });
     }
   },
   yl30: function (e, t, n) {
