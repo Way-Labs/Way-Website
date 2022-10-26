@@ -34880,6 +34880,7 @@
                               children: Object(an['jsx'])('h1', {
                                 style: { wordBreak: 'break-all' },
                                 onMouseEnter: b,
+                                className: 'swiper-no-swiping',
                                 children: v.map((e) =>
                                   Object(an['jsx'])('span', {
                                     className: 'nbr ltr',
@@ -34889,8 +34890,9 @@
                               }),
                             }),
                             Object(an['jsx'])('p', {
+                              className: 'swiper-no-swiping',
                               children:
-                                'Way Network achieves the multichain asset and data interoperability based on the IPFS, Endpoint, Oracle and Relayer.',
+                                'Way Network achieves the multichain asset and data interoperability based on zkRayler, ZK Verifier, IPFS, Sender, and Receiver.',
                             }),
                             Object(an['jsx'])('div', {
                               children: Object(an['jsx'])('a', {
@@ -34922,13 +34924,15 @@
                       className: 'swiper-slide plan1',
                       children: [
                         Object(an['jsxs'])('div', {
-                          className: 'left textsmall',
+                          className: 'left textsmall ',
                           children: [
                             Object(an['jsx'])('h1', {
+                              className: 'swiper-no-swiping',
                               children:
                                 'The native communication integrated with distributed computing and storage',
                             }),
                             Object(an['jsx'])('p', {
+                              className: 'swiper-no-swiping',
                               children:
                                 'The Way Endpoint is encapsulated in Communication, Validation, and Network, which orchestrates the data by the distributed computing and storage between any pair of nodes.',
                             }),
@@ -34949,12 +34953,14 @@
                           className: 'left textsmall',
                           children: [
                             Object(an['jsxs'])('h1', {
+                              className: 'swiper-no-swiping',
                               children: [
                                 'The ideal solution to enable cross-chain transactions with trustless valid delivery',
                                 ' ',
                               ],
                             }),
                             Object(an['jsx'])('p', {
+                              className: 'swiper-no-swiping',
                               children:
                                 'The way communication protocol is the preferred method of cross-chain messaging system and can guarantee the trustless valid delivery without placing any trust in intermediary entities or tokens.',
                             }),
@@ -34975,12 +34981,14 @@
                           className: 'left textsmall',
                           children: [
                             Object(an['jsxs'])('h1', {
+                              className: 'swiper-no-swiping',
                               children: [
                                 'The network fabric underlying the fully-connected omnichain ecosystem',
                                 ' ',
                               ],
                             }),
                             Object(an['jsx'])('p', {
+                              className: 'swiper-no-swiping',
                               children:
                                 'Developers will be able to write seamless inter-chain applications like DEX or yield aggregator without worrying about differing semantics between inter- and intra-chain transactions.',
                             }),

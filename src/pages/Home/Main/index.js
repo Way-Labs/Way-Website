@@ -44,6 +44,7 @@ const Page = () => {
             });
           },
         },
+        // noSwiping : true
       }),
     );
   }, []);
@@ -142,6 +143,7 @@ const Page = () => {
                   <h1
                     style={{ wordBreak: 'break-all' }}
                     onMouseEnter={handleMouseEnter}
+                    className="swiper-no-swiping"
                   >
                     {aniText.map((item) => (
                       <span className="nbr ltr">
@@ -156,10 +158,10 @@ const Page = () => {
                 </div>
                 {/*  */}
 
-                <p>
+                <p className="swiper-no-swiping">
                   Way Network achieves the multichain asset and data
-                  interoperability based on the IPFS, Endpoint, Oracle and
-                  Relayer.
+                  interoperability based on zkRayler, ZK Verifier, IPFS, Sender,
+                  and Receiver.
                 </p>
                 {/* <button
                   className="btn btn-4 hover-border-7"
@@ -181,12 +183,12 @@ const Page = () => {
               </div>
             </div>
             <div className="swiper-slide plan1">
-              <div className="left textsmall">
-                <h1>
+              <div className="left textsmall ">
+                <h1 className="swiper-no-swiping">
                   The native communication integrated with distributed computing
                   and storage
                 </h1>
-                <p>
+                <p className="swiper-no-swiping">
                   The Way Endpoint is encapsulated in Communication, Validation,
                   and Network, which orchestrates the data by the distributed
                   computing and storage between any pair of nodes.
@@ -205,11 +207,11 @@ const Page = () => {
             </div>
             <div className="swiper-slide plan1">
               <div className="left textsmall">
-                <h1>
+                <h1 className="swiper-no-swiping">
                   The ideal solution to enable cross-chain transactions with
                   trustless valid delivery{' '}
                 </h1>
-                <p>
+                <p className="swiper-no-swiping">
                   The way communication protocol is the preferred method of
                   cross-chain messaging system and can guarantee the trustless
                   valid delivery without placing any trust in intermediary
@@ -229,11 +231,11 @@ const Page = () => {
             </div>
             <div className="swiper-slide plan1">
               <div className="left textsmall">
-                <h1>
+                <h1 className="swiper-no-swiping">
                   The network fabric underlying the fully-connected omnichain
                   ecosystem{' '}
                 </h1>
-                <p>
+                <p className="swiper-no-swiping">
                   Developers will be able to write seamless inter-chain
                   applications like DEX or yield aggregator without worrying
                   about differing semantics between inter- and intra-chain
