@@ -1,6 +1,5 @@
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.module.min.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.126.0/examples/jsm/controls/OrbitControls.js';
-
 const demo = document.querySelector('.demo');
 const container = document.querySelector('.animation-wrapper');
 const globeCanvas = container.querySelector('#globe-3d');
@@ -14,19 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let surface = new Surface();
 
-  new THREE.TextureLoader().load(
-    'https://ksenia-k.com/img/demos-preview/earth-map.jpeg',
-    (mapTex) => {
-      surface.earthTexture = mapTex;
-      surface.earthTexture.repeat.set(1, 1);
-      surface.earthTextureData = surface.getImageData();
-      surface.createGlobe();
-      surface.addAnchor();
-      surface.addCanvasEvents();
-      surface.updateDotSize();
-      surface.loop();
-    },
-  );
+  new THREE.TextureLoader().load('map.jpeg', (mapTex) => {
+    surface.earthTexture = mapTex;
+    surface.earthTexture.repeat.set(1, 1);
+    surface.earthTextureData = surface.getImageData();
+    surface.createGlobe();
+    surface.addAnchor();
+    surface.addCanvasEvents();
+    surface.updateDotSize();
+    surface.loop();
+  });
 
   window.addEventListener(
     'resize',
