@@ -119,7 +119,7 @@ const Page = () => {
       <div className="container">
         <header className="header">
           <a className="header__logo">
-            <Logo style={{ width: '40px' }} />
+            <Logo style={{ width: '110px' }} />
           </a>
           {/* <nav className="header__menu">
             <ul className="header__menu__list">
@@ -162,8 +162,8 @@ const Page = () => {
                 {/*  */}
 
                 <p className="swiper-no-swiping">
-                  Way Network achieves the multichain asset and data
-                  zero-knowledge interoperability based on zkRayler, ZK
+                  Way Network achieves the interchain asset and data
+                  zero-knowledge interoperability based on zkRelayer, ZK
                   Verifier, IPFS, Sender, and Receiver.
                 </p>
                 {/* <button
