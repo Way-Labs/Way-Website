@@ -152,7 +152,7 @@ const Page = () => {
                       </span>
                     ))} */}
                     Zero-Knowledge Omnichain Asset and Data Interoperation
-                    Network
+                    Protocol
                   </h1>
                   {/* <h1>
                     Omnichain Asset and Data Interoperational Protocol
@@ -173,7 +173,13 @@ const Page = () => {
                   <span>Explore</span>
                 </button> */}
                 <div>
-                  <a className="viewCode">Explore</a>
+                  <a
+                    target="_blank"
+                    href="https://way-networks-organization.gitbook.io/way-network/concepts/way-network-architecture"
+                    className="viewCode"
+                  >
+                    Explore
+                  </a>
                 </div>
               </div>
               <div className="right">
@@ -306,7 +312,7 @@ const Page = () => {
                   <Discord />
                 </a>
               </li> */}
-              <li>
+              {/* <li>
                 <a
                   target="_blank"
                   href="https://way-networks-organization.gitbook.io/way-network/"
@@ -314,7 +320,7 @@ const Page = () => {
                 >
                   <Gitbook />
                 </a>
-              </li>
+              </li> */}
               {/* <li>
                 <a href="#" title="Youtube">
                   <Youtube />
