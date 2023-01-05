@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 import { Drawer } from 'antd';
-import { ReactComponent as Logo } from '@/assets/logo.svg';
+import Logo from '@/assets/logo.svg';
 import { ReactComponent as Arrow } from '@/assets/arrow.svg';
 import { ReactComponent as Github } from '@/assets/github.svg';
 import { ReactComponent as Twitter } from '@/assets/twitter.svg';
@@ -119,7 +119,8 @@ const Page = () => {
       <div className="container">
         <header className="header">
           <a className="header__logo">
-            <Logo style={{ width: '110px' }} />
+            {/* <Logo style={{ width: '110px' }} /> */}
+            <img src={Logo} style={{ width: '110px' }} />
           </a>
           {/* <nav className="header__menu">
             <ul className="header__menu__list">
@@ -135,7 +136,7 @@ const Page = () => {
             </ul>
           </nav> */}
         </header>
-        <Menu />
+        {/* <Menu /> */}
         <div className="swiper">
           <div className="swiper-wrapper">
             <div className="swiper-slide plan1">
@@ -151,8 +152,7 @@ const Page = () => {
                         {(item.num == 2 && item.text) || item.num}
                       </span>
                     ))} */}
-                    Zero-Knowledge Omnichain Asset and Data Interoperation
-                    Protocol
+                    Zero-Knowledge Omnichain Interoperation Protocol
                   </h1>
                   {/* <h1>
                     Omnichain Asset and Data Interoperational Protocol
@@ -285,6 +285,15 @@ const Page = () => {
               <li>
                 <a
                   target="_blank"
+                  href="https://way-networks-organization.gitbook.io/way-network/"
+                  title="Gitbook"
+                >
+                  <Gitbook />
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
                   href="https://github.com/Way-Labs"
                   title="Github"
                 >
@@ -312,15 +321,7 @@ const Page = () => {
                   <Discord />
                 </a>
               </li> */}
-              {/* <li>
-                <a
-                  target="_blank"
-                  href="https://way-networks-organization.gitbook.io/way-network/"
-                  title="Gitbook"
-                >
-                  <Gitbook />
-                </a>
-              </li> */}
+
               {/* <li>
                 <a href="#" title="Youtube">
                   <Youtube />
