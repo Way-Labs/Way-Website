@@ -143,7 +143,6 @@ const Page = () => {
               <div className="left">
                 <div className="random">
                   <h1
-                    style={{ wordBreak: 'break-all' }}
                     onMouseEnter={handleMouseEnter}
                     className="swiper-no-swiping"
                   >
@@ -175,7 +174,7 @@ const Page = () => {
                 <div>
                   <a
                     target="_blank"
-                    href="https://way-networks-organization.gitbook.io/way-network/concepts/way-network-architecture"
+                    href="https://way-networks-organization.gitbook.io/way-network/"
                     className="viewCode"
                   >
                     Explore
