@@ -151,7 +151,7 @@ const Page = () => {
                         {(item.num == 2 && item.text) || item.num}
                       </span>
                     ))} */}
-                    Zero-Knowledge Omnichain Interoperation Protocol
+                    Zero-Knowledge Omnichain Interoperability Protocol
                   </h1>
                   {/* <h1>
                     Omnichain Asset and Data Interoperational Protocol

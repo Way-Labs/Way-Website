@@ -34359,7 +34359,7 @@
                                 onMouseEnter: b,
                                 className: 'swiper-no-swiping',
                                 children:
-                                  'Zero-Knowledge Omnichain Interoperation Protocol',
+                                  'Zero-Knowledge Omnichain Interoperability Protocol',
                               }),
                             }),
                             Object(mt['jsx'])('p', {
