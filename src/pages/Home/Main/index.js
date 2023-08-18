@@ -28,7 +28,7 @@ for (let i = 0; i < t.length; i++) {
 const Page = () => {
   const [mySwiper, setMyswiper] = useState();
   const [visible, setVisible] = useState(false);
-  const [navList, setNavList] = useState([true, false, false, false]);
+  const [navList, setNavList] = useState([true, false, false]);
   const [aniText, setAniText] = useState(letters);
   useLayoutEffect(() => {
     setMyswiper(
@@ -205,7 +205,7 @@ const Page = () => {
                 <iframe src="/plan2/index.html"></iframe>
               </div>
             </div>
-            <div className="swiper-slide plan1">
+            {/* <div className="swiper-slide plan1">
               <div className="left textsmall">
                 <h1 className="swiper-no-swiping">
                   The ideal solution to enable cross-chain transactions with
@@ -217,18 +217,11 @@ const Page = () => {
                   valid delivery without placing any trust in intermediary
                   entities or tokens.
                 </p>
-                {/* <button
-                  className="btn btn-4 hover-border-7"
-                  onClick={() => setVisible(true)}
-                >
-                  <span>Explore</span>
-                </button> */}
-                {/* <div><a className="viewCode">Explore</a></div> */}
               </div>
               <div className="right">
                 <iframe src="/plan4/index.html"></iframe>
               </div>
-            </div>
+            </div> */}
             <div className="swiper-slide plan1">
               <div className="left textsmall">
                 <h1 className="swiper-no-swiping">
