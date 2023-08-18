@@ -10448,7 +10448,7 @@
             ? 2 /* Macintosh */
             : _isWindows
             ? 1 /* Windows */
-            : 3; /* Linux */
+            : 3 /* Linux */;
         let _isLittleEndian = true;
         let _isLittleEndianComputed = false;
         function isLittleEndian() {
